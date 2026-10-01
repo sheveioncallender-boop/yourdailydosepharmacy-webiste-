@@ -1,0 +1,398 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+  <data noupdate="1">
+    <record id="page_home" model="website.page">
+      <field name="name">Home</field>
+      <field name="url">/ydd-home</field>
+      <field name="type">qweb</field>
+      <field name="key">ydd_pharmacy_website.page_home</field>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="is_published" eval="True"/>
+      <field name="website_meta_title">Home | Your Daily Dose Pharmacy</field>
+      <field name="website_meta_description">Your Daily Dose Pharmacy: pharmacy care, wellness, and everyday essentials with a personal touch.</field>
+      <field name="arch" type="xml">
+        <t t-name="ydd_pharmacy_website.page_home">
+          <t t-call="website.layout">
+            <div id="wrap" class="ydd-content ydd-home oe_structure"><section class="banner-slider" aria-roledescription="carousel" aria-label="Discover Your Daily Dose" data-snippet="s_text_block" data-name="Your Daily Dose Home"><div class="banner-slide active" role="group" aria-roledescription="slide" aria-label="1 of 3"><img src="/ydd_pharmacy_website/static/src/img/family.jpg" alt="Family enjoying time together outdoors" width="2200" height="1467" fetchpriority="high" class="img-fluid" decoding="async"/><div class="banner-shade"/><div class="wrap banner-content"><span class="eyebrow">HEALTH. WELLNESS. EVERY DAY.</span><h1>Your daily dose<br/>of <em>better living.</em></h1><p>Pharmacy care, wellness and everyday essentials.<br/>Right here in Port of Spain.</p><div class="hero-buttons"><a class="button " href="/shop">Shop everyday essentials<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a><a href="/visit-us" class="button secondary">Visit &amp; contact</a></div></div></div><div class="banner-slide pharmacy-slide" role="group" aria-roledescription="slide" aria-label="2 of 3" aria-hidden="true" inert=""><img src="/ydd_pharmacy_website/static/src/img/pharmacist.jpg" alt="A pharmacy professional holding a notebook in a pharmacy" width="1600" height="2400" class="img-fluid" decoding="async"/><div class="banner-shade"/><div class="wrap banner-content"><span class="eyebrow">A LITTLE CARE GOES A LONG WAY</span><h2>Here for your health.<br/><em>Here for you.</em></h2><p>Prescription questions. Everyday essentials.<br/>A helpful place to start.</p><div class="hero-buttons"><a class="button " href="/pharmacy-services">Explore pharmacy care<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a><a href="/visit-us" class="button secondary">Visit &amp; contact</a></div></div></div><div class="banner-slide wellness-slide" role="group" aria-roledescription="slide" aria-label="3 of 3" aria-hidden="true" inert="inert"><img src="/ydd_pharmacy_website/static/src/img/wellness.jpg" alt="Woman practising yoga outdoors" width="1400" height="2100" decoding="async"/><div class="banner-shade"/><div class="wrap banner-content"><span class="eyebrow">MAKE TIME FOR YOURSELF</span><h2>A little balance.<br/><em>Every single day.</em></h2><p>Personal care and everyday essentials,<br/>all in one place.</p><div class="hero-buttons"><a class="button" href="/shop">Find your essentials <span aria-hidden="true">→</span></a><a href="/visit-us" class="button secondary">Visit &amp; contact</a></div></div></div><div class="banner-controls"><button class="slide-prev" aria-label="Previous banner" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button><div class="slide-dots"><button class="selected" aria-label="Show banner 1" aria-pressed="true" type="button"/><button aria-label="Show banner 2" aria-pressed="false" type="button"/><button aria-label="Show banner 3" aria-pressed="false" type="button"/></div><button class="slide-next" aria-label="Next banner" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button><button class="slide-pause" aria-label="Pause banners" type="button">Ⅱ</button></div></section>
+<section class="care-links" aria-label="Care at Your Daily Dose" data-snippet="s_text_block" data-name="Your Daily Dose Home"><div class="wrap"><a href="/pharmacy-services#prescription"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 15 6-6M5.5 18.5a5 5 0 0 1 0-7l6-6a5 5 0 0 1 7 7l-6 6a5 5 0 0 1-7 0Z"/></svg> Prescription care</a><a href="/pharmacy-services#advice"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5H4l-2 2v-9.5A8.5 8.5 0 1 1 21 11.5Z"/><path d="M7 10h9m-9 4h6"/></svg> Pharmacy guidance</a><a href="/wellness"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 3C9 1 2 7 5 15c8 4 15-2 15-12Z"/><path d="m3 21 12-13"/></svg> Everyday wellness</a></div></section>
+<t t-call="ydd_pharmacy_website.category_circles"/><t t-call="ydd_pharmacy_website.promo_banners"/><t t-call="ydd_pharmacy_website.featured_products"/><section class="ydd-about-strip" data-snippet="s_text_block" data-name="About Us">
+  <div class="wrap split"><div class="rounded-photo"><img src="/ydd_pharmacy_website/static/src/img/pharmacist.jpg" width="1600" height="2400" alt="Pharmacy professional in a pharmacy" loading="lazy" decoding="async"/></div>
+  <div class="split-copy"><span class="eyebrow">YOUR NEIGHBOURHOOD PHARMACY</span><h2>A personal touch.<br/><em>For the whole family.</em></h2><p>Everyday essentials, thoughtful pharmacy care and a warm welcome. Find the products you need and a helpful place to start with your questions.</p><a href="/about-us" class="button">Get to know us <span aria-hidden="true">→</span></a></div></div>
+</section><section class="cta-section wrap reveal" data-snippet="s_text_block" data-name="Your Daily Dose Home"><div><span class="eyebrow">LET’S TAKE CARE OF YOU</span><h2>Your next step to<br/>feeling supported.</h2><p>Have a question? Start a conversation with Your Daily Dose.</p></div><a class="button " href="/visit-us">Visit &amp; contact<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></section></div>
+          </t>
+        </t>
+      </field>
+    </record>
+    <record id="page_services" model="website.page">
+      <field name="name">Our Services</field>
+      <field name="url">/pharmacy-services</field>
+      <field name="type">qweb</field>
+      <field name="key">ydd_pharmacy_website.page_services</field>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="is_published" eval="True"/>
+      <field name="website_meta_title">Our Services | Your Daily Dose Pharmacy</field>
+      <field name="website_meta_description">Explore prescription care, pharmacy guidance, and everyday wellness at Your Daily Dose.</field>
+      <field name="arch" type="xml">
+        <t t-name="ydd_pharmacy_website.page_services">
+          <t t-call="website.layout">
+            <div id="wrap" class="ydd-content oe_structure">
+              <section class="page-intro" data-snippet="s_text_block" data-name="Your Daily Dose Our Services">
+                <div class="wrap">
+                  <span class="eyebrow">OUR SERVICES</span>
+                  <h1>Good care starts<br/>with being heard.</h1>
+                  <p>Prescription questions, everyday essentials, and a little more clarity. Find your starting point below.</p>
+                </div>
+              </section>
+              <section class="wrap section service-list" data-snippet="s_text_block" data-name="Your Daily Dose Our Services">
+                <article id="prescription" class="service-row reveal">
+                  <div class="service-heading">
+                    <span class="iconbox">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="m9 15 6-6M5.5 18.5a5 5 0 0 1 0-7l6-6a5 5 0 0 1 7 7l-6 6a5 5 0 0 1-7 0Z"/>
+                      </svg>
+                    </span>
+                    <span class="eyebrow">PRESCRIPTION CARE</span>
+                    <h2>Let’s talk about<br/>your prescription.</h2>
+                  </div>
+                  <div>
+                    <p>Whether you have a new prescription or a question about your regular medication, start by speaking with the pharmacy.</p>
+                    <ul class="check-list">
+                      <li>Bring your current prescription when you visit.</li>
+                      <li>Have the names of your medicines ready.</li>
+                      <li>Ask the pharmacy to confirm availability and collection arrangements.</li>
+                    </ul>
+                    <a class="quiet-link" href="/visit-us">Plan your visit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+                  </div>
+                </article>
+                <article id="advice" class="service-row reveal">
+                  <div class="service-heading">
+                    <span class="iconbox">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5H4l-2 2v-9.5A8.5 8.5 0 1 1 21 11.5Z"/>
+                        <path d="M7 10h9m-9 4h6"/>
+                      </svg>
+                    </span>
+                    <span class="eyebrow">PHARMACY GUIDANCE</span>
+                    <h2>Your questions<br/>deserve time.</h2>
+                  </div>
+                  <div>
+                    <p>Not sure where to begin? A conversation can help you understand what to ask next and when you may need to speak with your healthcare provider.</p>
+                    <ul class="check-list">
+                      <li>Bring the packaging for any product you want to discuss.</li>
+                      <li>Let the pharmacy know about other medicines you use.</li>
+                      <li>Share any questions or concerns you would like to go through.</li>
+                    </ul>
+                    <a class="quiet-link" href="/visit-us">Get in touch <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+                  </div>
+                </article>
+                <article class="service-row reveal">
+                  <div class="service-heading">
+                    <span class="iconbox">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M5 7h14l1 14H4L5 7Z"/>
+                        <path d="M8 8V6a4 4 0 0 1 8 0v2"/>
+                      </svg>
+                    </span>
+                    <span class="eyebrow">EVERYDAY WELLNESS</span>
+                    <h2>The little things<br/>that look after you.</h2>
+                  </div>
+                  <div>
+                    <p>Discover categories for personal care, family essentials, and your daily wellbeing. Ask the pharmacy about the products currently available.</p>
+                    <a class="button secondary" href="/wellness">Explore wellness<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+                  </div>
+                </article>
+              <article id="delivery" class="service-row reveal"><div class="service-heading"><span class="iconbox"><i class="fa fa-truck" aria-hidden="true"/></span><span class="eyebrow">DELIVERY &amp; COLLECTION</span><h2>Your essentials.<br/>Closer to you.</h2></div><div><p>Delivery is available to Port of Spain and environs, and Diego Martin. Contact us to confirm your location, product availability, delivery fees and arrangements before ordering.</p><a t-if="website._ydd_whatsapp_url()" t-att-href="website._ydd_whatsapp_url()" target="_blank" rel="noopener" class="button secondary">Ask about delivery <i class="fa fa-whatsapp" aria-hidden="true"/></a></div></article></section>
+              <section id="questions" class="faq-section" data-snippet="s_text_block" data-name="Your Daily Dose Our Services">
+                <div class="wrap faq-grid">
+                  <div>
+                    <span class="eyebrow">A LITTLE MORE CLARITY</span>
+                    <h2>Before you visit.</h2>
+                    <p>A few helpful answers to get you started.</p>
+                  </div>
+                  <div class="faqs">
+                    <details>
+                      <summary>What should I bring with my prescription?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></summary>
+                      <p>Bring your current prescription and the names or packaging of any medicines you would like to discuss. Contact the pharmacy to confirm any additional requirements.</p>
+                    </details>
+                    <details>
+                      <summary>Can I order products on this website?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></summary>
+                      <p>Yes. Browse the shop, open a product, choose any available options, and add it to your cart. Checkout shows the payment and delivery methods available for your order.</p>
+                    </details>
+                    <details>
+                      <summary>Can I send my prescription through the website?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></summary>
+                      <p>Prescription uploads are not available on this website. Please contact the pharmacy directly to discuss how to provide your prescription.</p>
+                    </details>
+                    <details>
+                      <summary>Where can I find opening hours and directions?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></summary>
+                      <p>Visit our contact page for our contact information and opening hours. Please confirm availability before travelling.</p>
+                    </details>
+                  </div>
+                </div>
+              </section>
+              <section class="cta-section wrap reveal" data-snippet="s_text_block" data-name="Your Daily Dose Our Services">
+                <div>
+                  <span class="eyebrow">LET’S TAKE CARE OF YOU</span>
+                  <h2>Your next step to<br/>feeling supported.</h2>
+                  <p>Have a question? Start a conversation with Your Daily Dose.</p>
+                </div>
+                <a class="button " href="/visit-us">Visit &amp; contact<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+              </section>
+            </div>
+          </t>
+        </t>
+      </field>
+    </record>
+    <record id="page_wellness" model="website.page">
+      <field name="name">Wellness</field>
+      <field name="url">/wellness</field>
+      <field name="type">qweb</field>
+      <field name="key">ydd_pharmacy_website.page_wellness</field>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="is_published" eval="True"/>
+      <field name="website_meta_title">Wellness | Your Daily Dose Pharmacy</field>
+      <field name="website_meta_description">Explore personal care, family essentials, and wellbeing with Your Daily Dose Pharmacy.</field>
+      <field name="arch" type="xml">
+        <t t-name="ydd_pharmacy_website.page_wellness">
+          <t t-call="website.layout">
+            <div id="wrap" class="ydd-content oe_structure">
+              <section class="page-intro" data-snippet="s_text_block" data-name="Your Daily Dose Wellness">
+                <div class="wrap">
+                  <span class="eyebrow">EVERYDAY WELLNESS</span>
+                  <h1>Feel more like you.<br/>Every single day.</h1>
+                  <p>A little attention to yourself and the people you love. Explore the everyday side of wellbeing.</p>
+                </div>
+              </section>
+              <section class="wrap wellness-feature" data-snippet="s_text_block" data-name="Your Daily Dose Wellness">
+                <img src="/ydd_pharmacy_website/static/src/img/wellness.jpg" alt="Woman practising yoga outdoors" width="1400" height="800" class="img-fluid"/>
+                <div>
+                  <span class="eyebrow">WELLNESS, YOUR WAY</span>
+                  <h2>For real life.<br/>For all of you.</h2>
+                  <p>Your routine is personal. Find a starting point that fits your day, and ask about the essentials that are right for you.</p>
+                </div>
+              </section>
+              <section class="wrap section wellness-details" data-snippet="s_text_block" data-name="Your Daily Dose Wellness">
+                <article id="personal" class="wellness-detail reveal">
+                  <span class="iconbox">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="4"/>
+                      <path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>
+                    </svg>
+                  </span>
+                  <div>
+                    <span class="eyebrow">PERSONAL CARE</span>
+                    <h2>Your everyday routine.</h2>
+                    <p>From getting ready in the morning to winding down at night, personal care belongs in the small moments of your day.</p>
+                    <div class="tags">
+                      <span>Skin &amp; body care</span>
+                      <span>Oral care</span>
+                      <span>Daily hygiene</span>
+                    </div>
+                  </div>
+                </article>
+                <article id="family" class="wellness-detail reveal">
+                  <span class="iconbox">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/>
+                    </svg>
+                  </span>
+                  <div>
+                    <span class="eyebrow">FAMILY ESSENTIALS</span>
+                    <h2>For the people you love.</h2>
+                    <p>Thoughtful everyday essentials for the household. Speak with the pharmacy about available products and age-appropriate options.</p>
+                    <div class="tags">
+                      <span>Baby &amp; family care</span>
+                      <span>Home essentials</span>
+                      <span>Everyday comfort</span>
+                    </div>
+                  </div>
+                </article>
+                <article id="wellbeing" class="wellness-detail reveal">
+                  <span class="iconbox">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M20 3C9 1 2 7 5 15c8 4 15-2 15-12Z"/>
+                      <path d="m3 21 12-13"/>
+                    </svg>
+                  </span>
+                  <div>
+                    <span class="eyebrow">WELLBEING</span>
+                    <h2>Make room for yourself.</h2>
+                    <p>Have questions about a wellness product or supplement? Bring them to the pharmacy before adding something new to your routine.</p>
+                    <div class="tags">
+                      <span>Wellness products</span>
+                      <span>Vitamins &amp; supplements</span>
+                      <span>Personal guidance</span>
+                    </div>
+                  </div>
+                </article>
+              </section>
+              <section class="cta-section wrap reveal" data-snippet="s_text_block" data-name="Your Daily Dose Wellness">
+                <div>
+                  <span class="eyebrow">LET’S TAKE CARE OF YOU</span>
+                  <h2>Your next step to<br/>feeling supported.</h2>
+                  <p>Have a question? Start a conversation with Your Daily Dose.</p>
+                </div>
+                <a class="button " href="/visit-us">Visit &amp; contact<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+              </section>
+            </div>
+          </t>
+        </t>
+      </field>
+    </record>
+    <record id="page_about" model="website.page">
+      <field name="name">About Us</field>
+      <field name="url">/about-us</field>
+      <field name="type">qweb</field>
+      <field name="key">ydd_pharmacy_website.page_about</field>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="is_published" eval="True"/>
+      <field name="website_meta_title">About Us | Your Daily Dose Pharmacy</field>
+      <field name="website_meta_description">Get to know the people-first approach behind Your Daily Dose Pharmacy.</field>
+      <field name="arch" type="xml">
+        <t t-name="ydd_pharmacy_website.page_about">
+          <t t-call="website.layout">
+            <div id="wrap" class="ydd-content oe_structure">
+              <section class="page-intro" data-snippet="s_text_block" data-name="Your Daily Dose About Us">
+                <div class="wrap">
+                  <span class="eyebrow">MEET YOUR DAILY DOSE</span>
+                  <h1>A personal touch.<br/>A focus on you.</h1>
+                  <p>Pharmacy and wellness belong together. So do thoughtful care and a warm welcome.</p>
+                </div>
+              </section>
+              <section class="wrap section split about-page" data-snippet="s_text_block" data-name="Your Daily Dose About Us">
+                <div class="rounded-photo">
+                  <img src="/ydd_pharmacy_website/static/src/img/pharmacist.jpg" width="1200" height="1400" alt="Pharmacy professional in a pharmacy" loading="lazy" class="img-fluid"/>
+                </div>
+                <div class="split-copy">
+                  <span class="eyebrow">YOUR DAILY DOSE PHARMACY</span>
+                  <h2>Care is about<br/><em>people.</em></h2>
+                  <p>It’s the question you’ve been meaning to ask. The everyday essential on your list. The reassurance of knowing where to start.</p>
+                  <p>Our vision for Your Daily Dose is a place where pharmacy and everyday wellness feel connected, approachable, and personal.</p>
+                  <p>Because looking after your health should always begin with you.</p>
+                </div>
+              </section>
+              <section class="values-section" data-snippet="s_text_block" data-name="Your Daily Dose About Us">
+                <div class="wrap">
+                  <span class="eyebrow">OUR APPROACH</span>
+                  <h2>The little things<br/>make the difference.</h2>
+                  <div class="cards three">
+                    <div class="value-card">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/>
+                      </svg>
+                      <h3>People come first.</h3>
+                      <p>A welcoming experience that begins with listening.</p>
+                    </div>
+                    <div class="value-card">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5H4l-2 2v-9.5A8.5 8.5 0 1 1 21 11.5Z"/>
+                        <path d="M7 10h9m-9 4h6"/>
+                      </svg>
+                      <h3>Keep it clear.</h3>
+                      <p>Plain language and space for the questions that matter to you.</p>
+                    </div>
+                    <div class="value-card">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M20 3C9 1 2 7 5 15c8 4 15-2 15-12Z"/>
+                        <path d="m3 21 12-13"/>
+                      </svg>
+                      <h3>Think everyday.</h3>
+                      <p>Care that connects with your routine and the people you love.</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="cta-section wrap reveal" data-snippet="s_text_block" data-name="Your Daily Dose About Us">
+                <div>
+                  <span class="eyebrow">LET’S TAKE CARE OF YOU</span>
+                  <h2>Your next step to<br/>feeling supported.</h2>
+                  <p>Have a question? Start a conversation with Your Daily Dose.</p>
+                </div>
+                <a class="button " href="/visit-us">Visit &amp; contact<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+              </section>
+            </div>
+          </t>
+        </t>
+      </field>
+    </record>
+    <record id="page_contact" model="website.page">
+      <field name="name">Visit &amp; Contact</field>
+      <field name="url">/visit-us</field>
+      <field name="type">qweb</field>
+      <field name="key">ydd_pharmacy_website.page_contact</field>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="is_published" eval="True"/>
+      <field name="website_meta_title">Visit &amp; Contact | Your Daily Dose Pharmacy</field>
+      <field name="website_meta_description">Plan your visit to Your Daily Dose Pharmacy. </field>
+      <field name="arch" type="xml">
+        <t t-name="ydd_pharmacy_website.page_contact">
+          <t t-call="website.layout">
+            <div id="wrap" class="ydd-content oe_structure">
+              <section class="page-intro" data-snippet="s_text_block" data-name="Your Daily Dose Visit &amp; Contact">
+                <div class="wrap">
+                  <span class="eyebrow">VISIT &amp; CONTACT</span>
+                  <h1>A warm welcome.<br/>A helpful conversation.</h1>
+                  <p>Let’s make your next step a little easier.</p>
+                </div>
+              </section>
+              <section class="wrap section contact-grid" data-snippet="s_text_block" data-name="Your Daily Dose Visit &amp; Contact">
+                <div class="contact-main">
+                  <span class="eyebrow">HERE TO HELP</span>
+                  <h2>We look forward<br/>to welcoming you.</h2>
+                  <p>Speak with us about a product, your order, or your next visit.</p>
+                  <a class="button" href="/contactus">Send an enquiry <span aria-hidden="true">→</span></a>
+                  <a t-if="website._ydd_whatsapp_url()" t-att-href="website._ydd_whatsapp_url()" class="button secondary ydd-whatsapp-button" target="_blank" rel="noopener">Chat on WhatsApp <i class="fa fa-whatsapp" aria-hidden="true"/></a><div class="preview-note">
+                    <strong>Your order, in one place.</strong>
+                    <p>Sign in to your customer account to view your orders and documents.</p>
+                    <a class="quiet-link" href="/my/orders">View my orders →</a>
+                  </div>
+                </div>
+                <div class="contact-details">
+                  <article>
+                    <span class="eyebrow">FIND US</span>
+                    <h3>Your Daily Dose Pharmacy</h3>
+                    <p t-if="website.ydd_address" class="ydd-hours" t-field="website.ydd_address"/>
+                    <a t-if="website._ydd_maps_url()" t-att-href="website._ydd_maps_url()" target="_blank" rel="noopener" class="quiet-link">Get directions →</a>
+                  </article>
+                  <article>
+                    <span class="eyebrow">LET’S TALK</span>
+                    <h3>Contact us</h3>
+                    <p t-if="website.ydd_phone">
+                      <a t-att-href="'tel:' + website.ydd_phone">
+                        <span t-field="website.ydd_phone"/>
+                      </a>
+                    </p>
+                    <p t-if="website.ydd_email">
+                      <a t-att-href="'mailto:' + website.ydd_email">
+                        <span t-field="website.ydd_email"/>
+                      </a>
+                    </p>
+                    <a href="/contactus" class="quiet-link">Send an enquiry →</a>
+                  </article>
+                  <article>
+                    <span class="eyebrow">PLAN YOUR DAY</span>
+                    <h3>Opening hours</h3>
+                    <p t-if="website.ydd_opening_hours" class="ydd-hours" t-field="website.ydd_opening_hours"/>
+                    <p t-else="">Please contact us to confirm today’s opening hours.</p>
+                  </article>
+                <article><span class="eyebrow">STAY CONNECTED</span><h3>Follow Your Daily Dose</h3><p><a href="https://www.facebook.com/yddpharmacy/" target="_blank" rel="noopener">Facebook · @yddpharmacy</a></p><p><a href="https://www.instagram.com/yourdailydosepharmacy/" target="_blank" rel="noopener">Instagram · @yourdailydosepharmacy</a></p><p t-if="website._ydd_whatsapp_url()"><a t-att-href="website._ydd_whatsapp_url()" target="_blank" rel="noopener">WhatsApp · <span t-field="website.ydd_whatsapp"/></a></p></article></div>
+              </section>
+              <section class="faq-section" data-snippet="s_text_block" data-name="Your Daily Dose Visit &amp; Contact">
+                <div class="wrap visit-help">
+                  <div>
+                    <span class="eyebrow">BEFORE YOU STOP BY</span>
+                    <h2>A little preparation.<br/>A helpful visit.</h2>
+                  </div>
+                  <div>
+                    <p>Bring your prescription or the packaging for the product you want to discuss, along with any questions you have.</p>
+                    <p>Please confirm product availability and any service requirements with the pharmacy before travelling.</p>
+                    <a class="button secondary" href="/pharmacy-services">Explore our services<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </t>
+        </t>
+      </field>
+    </record>
+  </data>
+</odoo>

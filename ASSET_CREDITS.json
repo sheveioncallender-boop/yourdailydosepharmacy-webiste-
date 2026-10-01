@@ -1,0 +1,158 @@
+{
+  "approved_design": {
+    "photography": [
+      {
+        "file": "ydd_pharmacy_website/static/src/img/pharmacist.jpg",
+        "photographer": "BYB BYB",
+        "source": "https://www.pexels.com/photo/young-pharmacist-in-drugstore-19471013/"
+      },
+      {
+        "file": "ydd_pharmacy_website/static/src/img/wellness.jpg",
+        "photographer": "Polina Tankilevitch",
+        "source": "https://www.pexels.com/photo/a-woman-doing-yoga-at-the-park-8538961/"
+      },
+      {
+        "file": "ydd_pharmacy_website/static/src/img/family.jpg",
+        "photographer": "I E Mike",
+        "source": "https://www.pexels.com/photo/7800414/"
+      }
+    ],
+    "photo_license": "https://www.pexels.com/license/",
+    "note": "Real stock photographs; people pictured are not represented as Your Daily Dose Pharmacy staff or customers.",
+    "fonts": "Inter and Inter Tight, Google Fonts; SIL Open Font License",
+    "reference": "https://www.dwellingstrinidad.com/"
+  },
+  "sample_products": [
+    {
+      "key": "vanicream-daily",
+      "category": "Skin Care",
+      "name": "Vanicream Daily Facial Moisturizer — 3 fl oz",
+      "price": 165,
+      "description": "A 3 fl oz facial moisturiser for your daily skin-care routine. Check the product label for ingredients and directions.",
+      "source_url": "https://fcp.online/product/vanicream-daily-facial-moisturizer-lightweight-non-greasy-3-fl-oz/",
+      "image_url": "https://fcp-media.s3.us-east-1.amazonaws.com/wp-content/uploads/2026/09/612FoWkcML._SL1500_-1-600x600.jpg",
+      "image_file": "vanicream-daily.jpg"
+    },
+    {
+      "key": "vanicream-cream",
+      "category": "Skin Care",
+      "name": "Vanicream Moisturizing Cream — 16 oz",
+      "price": 195,
+      "description": "Face and body moisturising cream in a 16 oz pump dispenser.",
+      "source_url": "https://fcp.online/product/vanicream-moisturizing-cream-body-face-moisturizer-16-oz-pump-dispenser/",
+      "image_url": "https://fcp-media.s3.us-east-1.amazonaws.com/wp-content/uploads/2026/09/61miICMJyeL._SL1500_-600x600.jpg",
+      "image_file": "vanicream-cream.jpg"
+    },
+    {
+      "key": "olay-body",
+      "category": "Bath & Body",
+      "name": "Olay Super Serum Body Wash — 20 fl oz",
+      "price": 199,
+      "description": "Body wash in the Normal Skin variant, supplied in a 20 fl oz bottle.",
+      "source_url": "https://fcp.online/product/olay-super-serum-body-wash-for-normal-skin-24hr-long-lasting-rich-hydration-5-ingredient-complex-for-bright-even-firm-luminous-skin-with-collagen-peptide-bha-vitamin-c-20-fl-oz/",
+      "image_url": "https://fcp-media.s3.us-east-1.amazonaws.com/wp-content/uploads/2026/09/71QPXJxDo1L._SL1500_-600x600.avif",
+      "image_file": "olay-body.jpg"
+    },
+    {
+      "key": "eos-lotion",
+      "category": "Bath & Body",
+      "name": "eos Shea Better Lotion — Strawberry Dream, 16 fl oz",
+      "price": 140,
+      "description": "Strawberry Dream body lotion from the eos Shea Better range, in a 16 fl oz bottle.",
+      "source_url": "https://fcp.online/product/eos-shea-better-body-lotion-strawberry-dream-24-hour-moisture-skin-care-lightweight-non-greasy-made-with-natural-shea-vegan-16-fl-oz/",
+      "image_url": "https://fcp-media.s3.us-east-1.amazonaws.com/wp-content/uploads/2024/07/61nVLpyhhcL._SL1500_-600x600.jpg",
+      "image_file": "eos-lotion.jpg"
+    },
+    {
+      "key": "ogx-mist",
+      "category": "Hair Care",
+      "name": "OGX ProGrowth + Peptide Serum Mist — 6.5 fl oz",
+      "price": 129,
+      "description": "Hair serum mist from the OGX ProGrowth range, supplied in a 6.5 fl oz bottle.",
+      "source_url": "https://fcp.online/product/ogx-progrowth-peptide-serum-mist-6-5-fl-oz/",
+      "image_url": "https://fcp-media.s3.us-east-1.amazonaws.com/wp-content/uploads/2026/09/6144sndOyYL._SL1500_-600x600.avif",
+      "image_file": "ogx-mist.jpg"
+    },
+    {
+      "key": "ogx-shampoo",
+      "category": "Hair Care",
+      "name": "OGX Coconut Curls Shampoo — 13 fl oz",
+      "price": 65,
+      "description": "A 13 fl oz bottle from the OGX Quenching+ Coconut Curls shampoo range. Packaging may vary.",
+      "source_url": "https://fcp.online/product/ogx-quenching-coconut-curls-shampoo-curly-hair-shampoo-with-coconut-oil-citrus-oil-honey-13-fl-oz-packaging-may-vary/",
+      "image_url": "https://fcp-media.s3.us-east-1.amazonaws.com/wp-content/uploads/2026/01/GUEST_2e11348e-8e27-48ce-86fd-f39ba2d038dd-600x600.jpg",
+      "image_file": "ogx-shampoo.jpg"
+    },
+    {
+      "key": "olly-softgels",
+      "category": "Vitamins & Supplements",
+      "name": "OLLY Women’s Multivitamin Softgels — 60 Count",
+      "price": 260,
+      "description": "A 60-count pack of OLLY Ultra Strength Women’s Multivitamin Softgels with Omega-3s. Read the label and speak with a pharmacist before use.",
+      "source_url": "https://fcp.online/product/olly-ultra-strength-womens-multivitamin-softgels-omega-3s-60-count/",
+      "image_url": "https://fcp-media.s3.us-east-1.amazonaws.com/wp-content/uploads/2026/09/GUEST_c3326c35-48c4-4989-af03-4e70264e5083-600x600.avif",
+      "image_file": "olly-softgels.jpg"
+    },
+    {
+      "key": "olly-gummies",
+      "category": "Vitamins & Supplements",
+      "name": "OLLY Women’s 40+ Multivitamin Gummies — 90 Count",
+      "price": 245,
+      "description": "A 90-count pack of OLLY Women’s 40+ multivitamin gummies. Read the label and speak with a pharmacist before use.",
+      "source_url": "https://fcp.online/product/olly-womens-40-multivitamin-gummies-90ct/",
+      "image_url": "https://fcp-media.s3.us-east-1.amazonaws.com/wp-content/uploads/2026/08/GUEST_c253311e-9b7a-48ae-ad1e-44b5f8a81ba7-600x600.avif",
+      "image_file": "olly-gummies.jpg"
+    },
+    {
+      "key": "johnsons-shampoo",
+      "category": "Baby Care",
+      "name": "Johnson’s Baby Shampoo — 13.6 fl oz",
+      "price": 48,
+      "description": "Johnson’s Baby Shampoo in a 13.6 fl oz bottle for a baby-care routine. Follow the directions on the product label.",
+      "source_url": "https://fcp.online/product/johnsons-baby-shampoo-for-delicate-scalp-skin-13-6-fl-oz/",
+      "image_url": "https://fcp-media.s3.us-east-1.amazonaws.com/wp-content/uploads/2024/09/GUEST_031d4c40-0d7e-470e-9ee1-dfc1b69c7b21-600x600.webp",
+      "image_file": "johnsons-shampoo.jpg"
+    },
+    {
+      "key": "venus-razor",
+      "category": "Everyday Essentials",
+      "name": "Gillette Venus Sensitive Razors — 2 Pack",
+      "price": 37.95,
+      "description": "A two-pack of Gillette Venus Sensitive razors for a personal-care routine.",
+      "source_url": "https://fcp.online/product/gillette-venus-sensitive-razor-2-pack/",
+      "image_url": "https://fcp-media.s3.us-east-1.amazonaws.com/wp-content/uploads/2023/08/638450-15-600x600.webp",
+      "image_file": "venus-razor.jpg"
+    },
+    {
+      "key": "dove-spray",
+      "category": "Everyday Essentials",
+      "name": "Dove Deodorant — Pomegranate & Lemon Verbena, 250 ml",
+      "price": 55,
+      "description": "Dove Advanced Care spray in the Pomegranate & Lemon Verbena fragrance, supplied in a 250 ml can.",
+      "source_url": "https://fcp.online/product/dove-advanced-care-pomegranate-lemon-verbena-deodorant-spray-250ml/",
+      "image_url": "https://fcp-media.s3.us-east-1.amazonaws.com/wp-content/uploads/2025/01/61ENAu-JfOL-600x600.jpg",
+      "image_file": "dove-spray.jpg"
+    },
+    {
+      "key": "burts-lip",
+      "category": "Everyday Essentials",
+      "name": "Burt’s Bees Tinted Lip Balm — 3 Pack",
+      "price": 145,
+      "description": "A value pack containing three 0.15 oz tubes of Burt’s Bees tinted lip balm.",
+      "source_url": "https://fcp.online/product/burts-bees-tinted-lip-balm-value-pack-0-15-oz-3-tubes/",
+      "image_url": "https://fcp-media.s3.us-east-1.amazonaws.com/wp-content/uploads/2026/09/71glPkYR3OL._SL1500_-600x600.avif",
+      "image_file": "burts-lip.jpg"
+    }
+  ],
+  "sample_product_notes": "Product identities and reference images supplied via the user-requested FCP example source. Descriptions are brief original summaries. Prices are test values, not Your Daily Dose Pharmacy’s confirmed retail prices. Replace supplier images with authorised catalogue assets before public launch.",
+  "brand_logo": {
+    "file": "ydd_pharmacy_website/static/src/img/ydd-logo.jpeg",
+    "source": "Logo supplied by the user on 2026-10-01",
+    "processing": "Original raster file unchanged. CSS frames the surrounding whitespace."
+  },
+  "code_reference": {
+    "repository": "https://github.com/sheveioncallender-boop/noels-pharmacy-website-19",
+    "commit": "1dd1527d68db58ad0d1cb3e9eb25beb8201ad7d2",
+    "structure": "Latest five-page Noel’s storefront, using the Value Seekers native-header approach."
+  }
+}

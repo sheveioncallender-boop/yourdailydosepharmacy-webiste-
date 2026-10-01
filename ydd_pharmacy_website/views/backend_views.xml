@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="settings_ydd" model="ir.ui.view">
+        <field name="name">Your Daily Dose website settings</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//app[@name='website']" position="inside">
+                <block title="Your Daily Dose Pharmacy" name="ydd_settings">
+                    <setting string="Your Daily Dose branding" help="Apply the logo colour palette and fonts around Odoo’s native shop, header, cart and checkout."><field name="ydd_brand_enabled"/></setting>
+                    <setting string="Opening hours" help="Displayed in the top strip and on the Visit &amp; Contact page. Use confirmed hours. These contact fields change the website only; configure company details separately for Odoo’s contact form and invoices."><field name="ydd_opening_hours" placeholder="Add confirmed opening hours"/></setting>
+                    <setting string="Pharmacy telephone"><field name="ydd_phone"/></setting>
+                    <setting string="WhatsApp" help="International digits only, for example 18683163281. Clear to hide WhatsApp links."><field name="ydd_whatsapp"/></setting>
+                    <setting string="Pharmacy address" help="Used on the contact page and map directions."><field name="ydd_address"/></setting>
+                    <setting string="Pharmacy email"><field name="ydd_email"/></setting>
+                    <setting string="Sample catalogue notice" help="Keep this enabled while reviewing sample products and prices."><field name="ydd_catalogue_notice"/></setting>
+                    <setting string="Sample products" help="Unpublish all Your Daily Dose sample products for the selected website before launch. This does not delete products or orders.">
+                        <button name="action_ydd_unpublish_samples" type="object" string="Unpublish sample products" class="btn btn-secondary" confirm="Unpublish the Your Daily Dose sample products on this website?"/>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+    <record id="category_ydd" model="ir.ui.view">
+        <field name="name">Your Daily Dose category card settings</field><field name="model">product.public.category</field>
+        <field name="inherit_id" ref="website_sale.product_public_category_form_view"/>
+        <field name="arch" type="xml"><field name="parent_id" position="after"><field name="ydd_homepage_featured"/><field name="sequence"/></field></field>
+    </record>
+    <record id="product_ydd" model="ir.ui.view">
+        <field name="name">Your Daily Dose product merchandising</field><field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='sales']" position="inside">
+                <group string="Your Daily Dose Website"><field name="ydd_homepage_featured"/><field name="ydd_sample_product"/><field name="ydd_sample_source_url" widget="url" invisible="not ydd_sample_product"/></group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

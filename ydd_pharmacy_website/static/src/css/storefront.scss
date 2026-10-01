@@ -1,0 +1,289 @@
+// Value Seekers storefront structure, using Your Daily Dose original blue/red identity.
+// Native Odoo controls and routes keep their own handlers and visibility rules.
+.ydd-site {
+    --bs-link-color: #0057a6;
+    --bs-link-hover-color: #cf2027;
+    > header .navbar { box-shadow: 0 2px 8px #0057a60a; }
+    > header .navbar-brand img { height: 64px; max-width: 230px; }
+    > header .nav-link { font-weight: 700; white-space: nowrap; }
+    #top_menu { flex-grow: 1; justify-content: center; }
+    #o_main_nav > .navbar-nav { margin-left: auto; }
+    #o_main_nav .o_wsale_my_cart > a,
+    #o_main_nav .dropdown > a.o_navlink_background {
+        display: inline-flex; align-items: center; justify-content: center;
+        min-width: 44px; min-height: 44px;
+    }
+    > header .o_wsale_my_cart > a { background: #0057a6; color: white !important; }
+    > header .o_wsale_my_cart > a:hover { background: #004581; }
+    .dropdown-menu {
+        --bs-dropdown-link-active-bg: #0057a6;
+        --bs-dropdown-link-active-color: #fff;
+        --bs-dropdown-link-hover-bg: #edf3fa;
+        --bs-dropdown-link-hover-color: #0057a6;
+    }
+    .dropdown-item.active, .dropdown-item:active,
+    .nav-pills .nav-link.active, .nav-pills .show > .nav-link,
+    .active > .page-link, .list-group-item.active {
+        background: #0057a6 !important; color: #fff !important;
+    }
+    .btn-primary { background-color: #0057a6; border-color: #0057a6; color: #fff; }
+    .btn-primary:hover, .btn-primary:active { background-color: #004581; border-color: #004581; }
+    .btn-outline-primary { color: #0057a6; border-color: #0057a6; }
+    .btn-outline-primary:hover { background: #0057a6; color: white; }
+    .text-primary, .btn-link, .page-link { color: #0057a6 !important; }
+    .bg-primary { background-color: #0057a6 !important; }
+    .border-primary { border-color: #0057a6 !important; }
+    .form-check-input:checked { background-color: #0057a6; border-color: #0057a6; }
+    .form-control:focus, .form-select:focus { border-color: #0057a6; box-shadow: 0 0 0 .2rem #0057a620; }
+    .ydd-phone-link { display: inline-flex; gap: 8px; align-items: center; white-space: nowrap; text-decoration: none; }
+    .ydd-topbar { background: #0057a6; color: #fff; font-size: 12px; font-weight: 600; }
+    .ydd-topbar-inner {
+        width: Min(1240px, calc(100% - 48px)); margin-inline: auto;
+        display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 9px 0;
+    }
+    .ydd-topbar strong { color: #ffe0e2; }
+    .ydd-topbar-contact { display: flex; align-items: center; gap: 24px; }
+    .ydd-topbar a { color: white; }
+    .ydd-topbar a:hover { text-decoration: underline; }
+    .ydd-topbar-contact > span { max-width: 320px; }
+}
+
+.ydd-content {
+    font-family: Inter, Arial, sans-serif;
+    .wrap { width: Min(1240px, calc(100% - 48px)); }
+    h1, h2, h3 { font-family: 'Inter Tight', Inter, Arial, sans-serif; font-weight: 750; }
+    h2 { color: var(--navy); }
+    .eyebrow { letter-spacing: .09em; margin-bottom: 14px; }
+    .button { border-radius: 50px; font-weight: 700; padding: 14px 25px; gap: 14px; }
+    .button.secondary { border-color: var(--green); background: white; }
+    .button.secondary:hover { background: #fff0f1; }
+    .section { padding-block: 64px; }
+    .section-heading { margin-bottom: 28px; gap: 24px; }
+    .section-heading h2, .center-heading h2 { font-size: clamp(28px, 3vw, 38px); font-weight: 750; }
+    .center-heading { margin-bottom: 30px; }
+    .banner-slider { height: 530px; min-height: 0; background: white; }
+    .banner-slide { background: #f2f7fc; }
+    .banner-slide > img, .banner-slide:not(.pharmacy-slide) > img {
+        width: 58%; height: 100%; right: 0; object-position: center 45%;
+    }
+    .pharmacy-slide > img { object-position: center 30%; }
+    .wellness-slide > img { object-position: center 45% !important; }
+    .banner-slide .banner-shade, .banner-slide:not(.pharmacy-slide) .banner-shade,
+    .wellness-slide .banner-shade {
+        background: linear-gradient(90deg, #fff 0%, #fff 39%, #fffffff5 43%, #ffffff00 64%) !important;
+    }
+    .banner-content { color: var(--navy); padding-bottom: 35px; }
+    .banner-content .eyebrow { color: var(--green); font-size: 12px; }
+    .banner-content h1, .banner-content h2 {
+        color: var(--navy); font-size: clamp(42px, 4.3vw, 66px); line-height: 1.05;
+        font-weight: 800; max-width: 56%; letter-spacing: -.04em;
+    }
+    .banner-content p { color: var(--ink); max-width: 43%; font-size: 17px; margin: 24px 0; line-height: 1.65; }
+    .hero-buttons { display: flex; flex-wrap: wrap; gap: 12px; margin: 8px 0 0; max-width: 55%; }
+    .banner-content .button { background: var(--navy); color: white; border-color: var(--navy); border-radius: 50px; min-width: 0; }
+    .banner-content .button.secondary { color: var(--navy); background: white; border-color: var(--green); }
+    .banner-content .button:hover { background: #004581; border-color: #004581; color: white; }
+    .banner-controls { bottom: 17px; padding: 4px 10px; gap: 12px; border-radius: 30px; background: #ffffffed; box-shadow: 0 2px 12px #0057a610; }
+    .banner-controls button { color: var(--navy); min-width: 32px; min-height: 32px; }
+    .slide-dots { gap: 0; }
+    .slide-dots button { width: 32px; height: 32px; border: 0; background: transparent; }
+    .slide-dots button::before { content: ''; width: 8px; height: 8px; border: 1px solid var(--navy); border-radius: 50%; }
+    .slide-dots button.selected { background: transparent; }
+    .slide-dots button.selected::before { background: var(--navy); }
+    .banner-controls .slide-pause { border: 1px solid #dce4e9; margin-left: 0; }
+    .care-links { border: 0; position: relative; z-index: 2; }
+    .care-links > .wrap { border-radius: 16px; background: white; box-shadow: 0 8px 30px #0057a610; border: 1px solid #e6ecf0; margin-top: -1px; }
+    .care-links a { min-height: 84px; font-size: 14px; font-weight: 650; padding: 15px; }
+    .care-links a + a { border-left: 1px solid var(--line); }
+    .care-links a svg { width: 27px; height: 27px; }
+    .ydd-category-section { padding-block: 55px 42px; }
+    .ydd-category-circles { gap: 18px; }
+    .ydd-category { border: 1px solid #e3e9ed; border-radius: 15px; overflow: hidden; background: #fff; box-shadow: 0 4px 14px #0057a607; }
+    .ydd-category-image { border-radius: 0; border: 0; aspect-ratio: auto; height: 140px; background: #f4f7fb; }
+    .ydd-category-image img { padding: 16px; }
+    .ydd-category h3 { font-size: 15px; font-weight: 700; padding: 14px 8px; margin: 0; color: var(--navy); }
+    .ydd-category:hover .ydd-category-image { transform: none; box-shadow: none; background: #edf4fc; }
+    .ydd-category:hover { border-color: #b5cbe1; }
+    .ydd-promo-grid { gap: 22px; padding-block: 0 32px; }
+    .ydd-promo-card { border-radius: 18px; min-height: 250px; padding: 28px; background: linear-gradient(120deg,#eaf3ff,#f5f9fd); }
+    .ydd-promo-card:nth-child(2) { background: linear-gradient(120deg,#ffecee,#fff8f8); }
+    .ydd-promo-card h2 { font-size: 34px; font-weight: 800; margin-bottom: 18px; }
+    .ydd-promo-card img { height: 205px; }
+    .ydd-featured-section { padding-block: 20px 58px; }
+    .ydd-product-grid { gap: 20px; }
+    .ydd-product-card { border: 1px solid var(--line); border-radius: 15px; overflow: hidden; background: white; }
+    .ydd-product-photo { background: #f7f9fa; }
+    .ydd-product-copy { padding: 18px; }
+    .ydd-product-copy h3 { font-size: 17px; font-weight: 650; }
+    .ydd-product-price { font-size: 19px; }
+    .ydd-product-link { background: var(--navy); color: white; border: 0; border-radius: 30px; padding: 10px 15px; font-weight: 650; }
+    .ydd-product-link:hover { background: var(--blue); }
+    .ydd-sample-badge { border-radius: 20px; }
+    .ydd-about-strip { background: #f3f6fa; padding-block: 58px; margin-bottom: 55px; }
+    .split { gap: 65px; }
+    .rounded-photo, .wellness-feature, .wellness-tile { border-radius: 18px; }
+    .ydd-about-strip .rounded-photo { height: 360px; }
+    .ydd-about-strip .rounded-photo img { object-position: center 28%; }
+    .split-copy h2 { font-size: clamp(32px, 3.5vw, 47px); }
+    .cta-section { border-radius: 20px; padding: 38px 45px; margin-bottom: 55px; }
+    .cta-section h2 { color: white; font-size: 36px; }
+    .cta-section .button { border-radius: 40px; }
+    .page-intro { background: linear-gradient(110deg,#f0f5fd,#fdf1f2); padding-block: 60px; }
+    .page-intro h1 { font-weight: 800; color: var(--navy); font-size: clamp(38px, 4.5vw, 64px); }
+    .service-card { border: 1px solid var(--line); padding: 28px; border-radius: 16px; }
+    .service-card h3, .value-card h3 { font-weight: 700; }
+    .iconbox { border-radius: 13px; }
+    .faq-section, .values-section { padding-block: 60px; }
+    .service-row, .faq-grid, .contact-grid, .visit-help { gap: 60px; }
+    .wellness-feature h2 { color: white; }
+    .footer-main { gap: 35px; }
+    .footer-main h2 { color: white; font-weight: 700; }
+    .footer-logo { border-radius: 8px; max-width: 100%; }
+    .footer-note p { color: white; }
+    .footer-bottom { gap: 15px; }
+    :focus-visible { outline: 3px solid #cf2027; outline-offset: 4px; }
+    [id] { scroll-margin-top: 145px; }
+}
+
+@media (max-width: 991.98px) {
+    .ydd-site {
+        > header .navbar-brand img { height: 50px; max-width: 190px; }
+        .ydd-topbar-contact > span { display: none; }
+        .ydd-topbar-inner { font-size: 11px; }
+    }
+    .ydd-content {
+        .banner-content h1, .banner-content h2 { font-size: 46px; max-width: 58%; }
+        .banner-content p { font-size: 16px; }
+        .hero-buttons { max-width: 48%; }
+        .ydd-category-circles { grid-template-columns: repeat(3,minmax(0,1fr)); }
+        .ydd-product-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+        .ydd-promo-card { padding: 22px; min-height: 230px; }
+        .ydd-promo-card h2 { font-size: 28px; }
+        .ydd-promo-card img { height: 175px; }
+        .split, .service-row, .faq-grid, .contact-grid, .visit-help { gap: 35px; }
+        .footer-main { grid-template-columns: 1fr 1fr; }
+    }
+}
+@media (max-width: 600px) {
+    .ydd-site {
+        .ydd-topbar-inner { width: calc(100% - 32px); flex-wrap: wrap; justify-content: center; gap: 3px; padding-block: 7px; text-align: center; }
+        .ydd-topbar-inner > span { width: 100%; }
+        .ydd-topbar-contact { justify-content: center; }
+    }
+    .ydd-content {
+        .wrap { width: calc(100% - 32px); }
+        .banner-slider { height: 650px; }
+        .banner-slide > img, .banner-slide:not(.pharmacy-slide) > img { width: 100%; height: 270px; top: 0; object-position: center 40%; }
+        .pharmacy-slide > img { object-position: center 25%; }
+        .banner-slide .banner-shade, .banner-slide:not(.pharmacy-slide) .banner-shade,
+        .wellness-slide .banner-shade { background: linear-gradient(0deg,#fff 0%,#fff 56%,#ffffff00 72%) !important; }
+        .banner-content { justify-content: flex-end; padding-bottom: 73px; }
+        .banner-content h1, .banner-content h2 { max-width: 100%; font-size: 39px; }
+        .banner-content .eyebrow { font-size: 10px; margin-bottom: 12px; }
+        .banner-content p { max-width: 100%; font-size: 15px; margin: 17px 0; }
+        .hero-buttons { max-width: 100%; margin: 0; gap: 8px; }
+        .banner-content .button { padding: 11px 15px; min-height: 46px; font-size: 12px; }
+        .banner-controls { bottom: 16px; }
+        .care-links > .wrap { width: calc(100% - 32px); padding: 0; }
+        .care-links a { font-size: 11px; padding: 14px 8px; min-height: 100px; }
+        .ydd-category-section { padding-block: 38px 28px; }
+        .ydd-category-circles { gap: 12px; grid-template-columns: repeat(2,minmax(0,1fr)); }
+        .ydd-category-image { height: 125px; }
+        .ydd-category h3 { font-size: 14px; padding: 12px 8px; }
+        .ydd-promo-grid { grid-template-columns: 1fr; gap: 15px; padding-bottom: 28px; }
+        .ydd-promo-card { min-height: 220px; }
+        .ydd-promo-card h2 { font-size: 31px; }
+        .ydd-product-grid { gap: 12px; }
+        .ydd-product-copy { padding: 12px; }
+        .ydd-product-copy h3 { font-size: 14px; }
+        .ydd-product-price { font-size: 16px; }
+        .ydd-product-link { padding: 9px 10px; font-size: 11px; }
+        .section-heading { align-items: flex-start; flex-direction: column; gap: 12px; }
+        .ydd-featured-section { padding-block: 10px 38px; }
+        .split, .service-row, .faq-grid, .contact-grid, .visit-help { grid-template-columns: 1fr; gap: 28px; }
+        .ydd-about-strip { padding-block: 36px; margin-bottom: 36px; }
+        .ydd-about-strip .rounded-photo { height: 310px; }
+        .cta-section { padding: 28px; margin-bottom: 36px; gap: 22px; }
+        .cta-section h2 { font-size: 31px; }
+        .page-intro { padding-block: 40px; }
+        .page-intro p { font-size: 16px; }
+        .section { padding-block: 40px; }
+        .footer-main { gap: 28px 16px; }
+        .footer-brand { grid-column: 1 / -1; }
+        .footer-note { grid-column: 1 / -1; padding: 0; border: 0; }
+        .footer-bottom { flex-direction: column; }
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .ydd-content .banner-slide, .ydd-content .button, .ydd-content .ydd-product-photo img { transition: none; }
+}
+
+// Your Daily Dose identity. Keep the supplied logo intact and frame its whitespace.
+.ydd-site {
+    > header .navbar-brand.logo {
+        display: flex; align-items: center; justify-content: center;
+        width: 210px; height: 110px; overflow: hidden; flex-shrink: 0;
+    }
+    > header .navbar-brand.logo img {
+        width: 245px !important; height: 245px !important;
+        max-width: none !important; max-height: none !important;
+        flex-shrink: 0; object-fit: contain; transform: translateY(-1px);
+    }
+    > header .nav-link { font-size: 14px; }
+    .ydd-topbar strong { color: white; font-weight: 400; }
+    .ydd-topbar { background: #0057a6; }
+    > header .my_cart_quantity { background: #cf2027 !important; }
+    > header .navbar { border-bottom: 1px solid #e4eaf1; }
+    .ydd-catalogue-notice { background: #f2f6fb; color: #4b5e73; }
+}
+.ydd-content {
+    --navy: #0057a6; --blue: #004581; --green: #cf2027; --lime: #ffe0e2;
+    --ink: #17212d; --muted: #566575;
+    .footer-logo {
+        display: flex; align-items: center; justify-content: center;
+        width: 270px; height: 145px; overflow: hidden; padding: 0;
+    }
+    .footer-logo img { width: 308px; height: 308px; max-width: none; flex-shrink: 0; object-fit: contain; }
+    .footer-note > svg { color: #ffafb5; }
+    .footer-note > span { line-height: 1.7; letter-spacing: .08em; }
+    .ydd-social-links { display: flex; gap: 10px; margin-top: 20px; }
+    .ydd-social-links a {
+        display: inline-flex; align-items: center; justify-content: center;
+        width: 42px; height: 42px; border: 1px solid #ffffff50;
+        border-radius: 50%; color: white; font-size: 18px;
+    }
+    .ydd-social-links a:hover { background: #0057a6; border-color: #0057a6; }
+    .ydd-whatsapp-button { margin-top: 14px; }
+    .care-links a:first-child svg { color: #cf2027; }
+    .care-links a:nth-child(2) svg { color: #0057a6; }
+    .care-links a:nth-child(3) svg { color: #101820; }
+    .cta-section { background: #0057a6; }
+    .cta-section .button { background: white; color: #0057a6; border-color: white; }
+    .cta-section .button:hover { background: #ffecee; }
+    .cta-section .eyebrow { color: #fff; }
+    .banner-content h1, .banner-content h2 { letter-spacing: -.045em; }
+    .banner-content .button:not(.secondary) { background: #cf2027; border-color: #cf2027; }
+    .banner-content .button:not(.secondary):hover { background: #af151b; border-color: #af151b; }
+    .button.secondary { border-color: #b9cce0; }
+    .banner-content .button.secondary { border-color: #b9cce0; }
+}
+@media (max-width: 991.98px) {
+    .ydd-site > header .navbar-brand.logo { width: 170px; height: 90px; }
+    .ydd-site > header .navbar-brand.logo img { width: 202px !important; height: 202px !important; }
+}
+@media (max-width: 600px) {
+    .ydd-content .footer-logo { width: 250px; height: 135px; }
+    .ydd-content .footer-logo img { width: 285px; height: 285px; }
+    .ydd-content .banner-slider { height: 650px; }
+    .ydd-content .banner-content h1, .ydd-content .banner-content h2 { font-size: clamp(34px, 9.7vw, 39px); }
+}
+
+.ydd-content .ydd-footer-contact { min-width: 0; }
+.ydd-content .ydd-footer-contact p { font-size: 13px; color: #c4cedb; margin-bottom: 15px; }
+.ydd-content .ydd-footer-contact a { overflow-wrap: anywhere; font-size: 13px; }
+.ydd-content .contact-details a { overflow-wrap: anywhere; }
+.ydd-content .footer-main { grid-template-columns: 1.2fr .65fr .75fr 1.2fr; }
+@media(max-width:991.98px) { .ydd-content .footer-main { grid-template-columns: 1fr 1fr; } }
+@media(max-width:600px) { .ydd-content .footer-main { grid-template-columns: 1fr 1fr; gap: 26px; } .ydd-content .footer-brand, .ydd-content .ydd-footer-contact { grid-column: 1 / -1; } }
+
+.ydd-site > header .navbar-brand.logo > span { display: block; flex-shrink: 0; line-height: 0; }

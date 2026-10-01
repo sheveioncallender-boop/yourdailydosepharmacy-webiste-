@@ -1,0 +1,88 @@
+// Odoo owns all navigation, account, product, cart and payment interactions.
+// These rules change presentation only and apply only to the enabled website.
+.ydd-site {
+    --bs-primary: #0057a6;
+    --bs-primary-rgb: 0, 87, 166;
+    font-family: Inter, Arial, sans-serif;
+    h1, h2, h3, h4, h5, h6 { font-family: 'Inter Tight', Inter, Arial, sans-serif; }
+    > header .navbar { color: #0057a6; background-color: #fff; }
+    > header .navbar-brand img { max-height: 76px; width: auto; max-width: 285px; object-fit: contain; }
+    > header .nav-link { color: #0057a6; }
+    > header .nav-link:hover, > header .nav-link.active { color: #cf2027; }
+    > header .my_cart_quantity { background-color: #cf2027 !important; color: #fff; }
+    .btn-primary {
+        --btn-bg: #0057a6; --btn-border-color: #0057a6; --btn-color: #fff;
+        --btn-hover-bg: #004581; --btn-hover-border-color: #004581; --btn-hover-color: #fff;
+        --btn-active-bg: #004581; --btn-active-border-color: #004581;
+        --bs-btn-bg: #0057a6; --bs-btn-border-color: #0057a6; --bs-btn-color: #fff;
+        --bs-btn-hover-bg: #004581; --bs-btn-hover-border-color: #004581;
+        --bs-btn-active-bg: #004581; --bs-btn-active-border-color: #004581;
+    }
+    .o_wsale_products_grid_table .oe_product_image { background: #f6f8fa; }
+    .o_wsale_products_item_title { font-weight: 500; }
+    #bottom { background: #101820; padding: 0; }
+    #bottom > #footer, #bottom > .o_footer_copyright { display: none; }
+    // Preserve native footer in the editor so Odoo can still edit/restore its own structure.
+    .ydd-footer { background: #101820; color: #fff; padding-top: 50px; }
+    .ydd-footer a { text-decoration: none; }
+}
+.ydd-catalogue-notice { padding: 9px 20px; text-align: center; background: #eef4fb; color: #364454; font: 13px/1.5 Inter, sans-serif; }
+.ydd-content {
+    color: #17212d; font-family: Inter, Arial, sans-serif;
+    .ydd-hours { white-space: pre-line; }
+    .ydd-category-section { padding: 65px 0 55px; }
+    .ydd-category-circles { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); gap: 26px; text-align: center; }
+    .ydd-category-image { display: flex; width: 100%; aspect-ratio: 1; border-radius: 50%; overflow: hidden; background: #f3f6f6; border: 1px solid #e3e8ec; align-items: center; justify-content: center; transition: transform .4s ease,box-shadow .4s ease; }
+    .ydd-category-image img { width: 100%; height: 100%; object-fit: contain; padding: 19%; mix-blend-mode: multiply; }
+    .ydd-category h3 { font-size: 17px; font-weight: 500; margin-top: 16px; line-height: 1.4; }
+    .ydd-category:hover .ydd-category-image { transform: translateY(-4px); box-shadow: 0 12px 24px #0057a610; }
+    .ydd-featured-section { padding: 35px 0 65px; }
+    .ydd-product-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 32px 24px; }
+    .ydd-product-photo { display: block; position: relative; aspect-ratio: 1; background: #f6f8f8; overflow: hidden; }
+    .ydd-product-photo img { width: 100%; height: 100%; object-fit: contain; padding: 20px; mix-blend-mode: multiply; transition: transform .6s ease; }
+    .ydd-product-photo:hover img { transform: scale(1.04); }
+    .ydd-product-copy { padding: 17px 2px 0; }
+    .ydd-product-copy h3 { font: 500 17px/1.45 'Inter Tight',sans-serif; min-height: 50px; }
+    .ydd-product-price { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 12px; font-size: 16px; color: #0057a6; }
+    .ydd-product-price del { color: #7c8591; font-size: 13px; }
+    .ydd-product-link { display: flex; justify-content: space-between; align-items: center; font-size: 13px; margin-top: 16px; padding-top: 12px; border-top: 1px solid #dee5e8; color: #cf2027; }
+    .ydd-sample-badge { position: absolute; top: 10px; left: 10px; background: #fff; border: 1px solid #e0e7e2; padding: 3px 8px; font-size: 11px; color: #56645f; }
+    .ydd-promo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; padding-bottom: 20px; }
+    .ydd-promo-card { display: flex; align-items: center; background: #edf3f8; min-height: 340px; padding: 35px; overflow: hidden; }
+    .ydd-promo-card:nth-child(2) { background: #fff1f2; }
+    .ydd-promo-card > div { position: relative; z-index: 1; width: 60%; flex-shrink: 0; }
+    .ydd-promo-card h2 { font-size: 39px; line-height: 1.07; margin-bottom: 24px; }
+    .ydd-promo-card .eyebrow { font-size: 10px; }
+    .ydd-promo-card img { width: 48%; height: 255px; object-fit: contain; mix-blend-mode: multiply; }
+    .ydd-promo-card:hover img { transform: translateY(-4px); transition: transform .4s; }
+    .wellness-slide { background: #122b47; }
+    .wellness-slide .banner-shade { background: linear-gradient(90deg,#122b47 0%,#122b47ed 27%,#122b4770 56%,transparent 85%) !important; }
+    .wellness-slide > img { object-position: center 35% !important; }
+    @media(max-width: 991px) {
+        .ydd-category-circles { gap: 16px; }
+        .ydd-category h3 { font-size: 14px; }
+        .ydd-product-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+        .ydd-promo-card { padding: 25px; min-height: 300px; }
+        .ydd-promo-card h2 { font-size: 30px; }
+    }
+    @media(max-width: 600px) {
+        .ydd-category-section { padding: 40px 0 30px; }
+        .ydd-category-circles { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 25px 14px; }
+        .ydd-category h3 { font-size: 14px; margin-top: 11px; }
+        .ydd-category-image img { padding: 16%; }
+        .ydd-featured-section { padding: 20px 0 45px; }
+        .ydd-product-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px 14px; }
+        .ydd-product-photo img { padding: 12px; }
+        .ydd-product-copy h3 { font-size: 15px; min-height: 66px; }
+        .ydd-product-price { font-size: 15px; }
+        .ydd-promo-grid { grid-template-columns: 1fr; gap: 20px; }
+        .ydd-promo-card { min-height: 290px; }
+        .ydd-promo-card h2 { font-size: 32px; }
+        .ydd-promo-card img { height: 220px; }
+        .wellness-slide .banner-shade { background: linear-gradient(0deg,#122b47ee 0%,#122b47a0 36%,transparent 80%) !important; }
+    }
+}
+@media(max-width: 600px) {
+    .ydd-site > header .navbar-brand img { max-height: 60px; max-width: 205px; }
+    .ydd-catalogue-notice { font-size: 12px; }
+}

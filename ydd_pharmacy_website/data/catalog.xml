@@ -1,0 +1,329 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+  <data noupdate="1">
+    <record id="category_1" model="product.public.category">
+      <field name="name">Skin Care</field>
+      <field name="sequence">10</field>
+      <field name="ydd_homepage_featured" eval="True"/>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="image_1920" type="base64" file="ydd_pharmacy_website/static/src/img/vanicream-daily.jpg"/>
+      <field name="website_description" type="html">
+        <p>Explore skin care at Your Daily Dose Pharmacy.</p>
+      </field>
+    </record>
+    <record id="category_2" model="product.public.category">
+      <field name="name">Bath &amp; Body</field>
+      <field name="sequence">20</field>
+      <field name="ydd_homepage_featured" eval="True"/>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="image_1920" type="base64" file="ydd_pharmacy_website/static/src/img/olay-body.jpg"/>
+      <field name="website_description" type="html">
+        <p>Explore bath &amp; body at Your Daily Dose Pharmacy.</p>
+      </field>
+    </record>
+    <record id="category_3" model="product.public.category">
+      <field name="name">Hair Care</field>
+      <field name="sequence">30</field>
+      <field name="ydd_homepage_featured" eval="True"/>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="image_1920" type="base64" file="ydd_pharmacy_website/static/src/img/ogx-mist.jpg"/>
+      <field name="website_description" type="html">
+        <p>Explore hair care at Your Daily Dose Pharmacy.</p>
+      </field>
+    </record>
+    <record id="category_4" model="product.public.category">
+      <field name="name">Vitamins &amp; Supplements</field>
+      <field name="sequence">40</field>
+      <field name="ydd_homepage_featured" eval="True"/>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="image_1920" type="base64" file="ydd_pharmacy_website/static/src/img/olly-softgels.jpg"/>
+      <field name="website_description" type="html">
+        <p>Explore vitamins &amp; supplements at Your Daily Dose Pharmacy.</p>
+      </field>
+    </record>
+    <record id="category_5" model="product.public.category">
+      <field name="name">Baby Care</field>
+      <field name="sequence">50</field>
+      <field name="ydd_homepage_featured" eval="True"/>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="image_1920" type="base64" file="ydd_pharmacy_website/static/src/img/johnsons-shampoo.jpg"/>
+      <field name="website_description" type="html">
+        <p>Explore baby care at Your Daily Dose Pharmacy.</p>
+      </field>
+    </record>
+    <record id="category_6" model="product.public.category">
+      <field name="name">Everyday Essentials</field>
+      <field name="sequence">60</field>
+      <field name="ydd_homepage_featured" eval="True"/>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="image_1920" type="base64" file="ydd_pharmacy_website/static/src/img/venus-razor.jpg"/>
+      <field name="website_description" type="html">
+        <p>Explore everyday essentials at Your Daily Dose Pharmacy.</p>
+      </field>
+    </record>
+    <record id="sample_vanicream_daily" model="product.template">
+      <field name="name">Vanicream Daily Facial Moisturizer — 3 fl oz</field>
+      <field name="default_code">YDD-DEMO-001</field>
+      <field name="type">consu</field>
+      <field name="list_price">165</field>
+      <field name="website_sequence">10</field>
+      <field name="description_sale">A 3 fl oz facial moisturiser for your daily skin-care routine. Check the product label for ingredients and directions.</field>
+      <field name="ydd_sample_source_url">https://fcp.online/product/vanicream-daily-facial-moisturizer-lightweight-non-greasy-3-fl-oz/</field>
+      <field name="sale_ok" eval="True"/>
+      <field name="is_published" eval="True"/>
+      <field name="ydd_sample_product" eval="True"/>
+      <field name="ydd_homepage_featured" eval="True"/>
+      <field name="purchase_ok" eval="False"/>
+      <field name="is_storable" eval="False"/>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="public_categ_ids" eval="[(6, 0, [ref('category_1')])]"/>
+      <field name="image_1920" type="base64" file="ydd_pharmacy_website/static/src/img/vanicream-daily.jpg"/>
+      <field name="website_description" type="html">
+        <p>A 3 fl oz facial moisturiser for your daily skin-care routine. Check the product label for ingredients and directions.</p>
+        <p><strong>Sample product for website testing. </strong>Price, availability, pack details and product image must be confirmed by Your Daily Dose before live sales.</p>
+      </field>
+    </record>
+    <record id="sample_vanicream_cream" model="product.template">
+      <field name="name">Vanicream Moisturizing Cream — 16 oz</field>
+      <field name="default_code">YDD-DEMO-002</field>
+      <field name="type">consu</field>
+      <field name="list_price">195</field>
+      <field name="website_sequence">15</field>
+      <field name="description_sale">Face and body moisturising cream in a 16 oz pump dispenser.</field>
+      <field name="ydd_sample_source_url">https://fcp.online/product/vanicream-moisturizing-cream-body-face-moisturizer-16-oz-pump-dispenser/</field>
+      <field name="sale_ok" eval="True"/>
+      <field name="is_published" eval="True"/>
+      <field name="ydd_sample_product" eval="True"/>
+      <field name="ydd_homepage_featured" eval="True"/>
+      <field name="purchase_ok" eval="False"/>
+      <field name="is_storable" eval="False"/>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="public_categ_ids" eval="[(6, 0, [ref('category_1')])]"/>
+      <field name="image_1920" type="base64" file="ydd_pharmacy_website/static/src/img/vanicream-cream.jpg"/>
+      <field name="website_description" type="html">
+        <p>Face and body moisturising cream in a 16 oz pump dispenser.</p>
+        <p><strong>Sample product for website testing. </strong>Price, availability, pack details and product image must be confirmed by Your Daily Dose before live sales.</p>
+      </field>
+    </record>
+    <record id="sample_olay_body" model="product.template">
+      <field name="name">Olay Super Serum Body Wash — 20 fl oz</field>
+      <field name="default_code">YDD-DEMO-003</field>
+      <field name="type">consu</field>
+      <field name="list_price">199</field>
+      <field name="website_sequence">20</field>
+      <field name="description_sale">Body wash in the Normal Skin variant, supplied in a 20 fl oz bottle.</field>
+      <field name="ydd_sample_source_url">https://fcp.online/product/olay-super-serum-body-wash-for-normal-skin-24hr-long-lasting-rich-hydration-5-ingredient-complex-for-bright-even-firm-luminous-skin-with-collagen-peptide-bha-vitamin-c-20-fl-oz/</field>
+      <field name="sale_ok" eval="True"/>
+      <field name="is_published" eval="True"/>
+      <field name="ydd_sample_product" eval="True"/>
+      <field name="ydd_homepage_featured" eval="True"/>
+      <field name="purchase_ok" eval="False"/>
+      <field name="is_storable" eval="False"/>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="public_categ_ids" eval="[(6, 0, [ref('category_2')])]"/>
+      <field name="image_1920" type="base64" file="ydd_pharmacy_website/static/src/img/olay-body.jpg"/>
+      <field name="website_description" type="html">
+        <p>Body wash in the Normal Skin variant, supplied in a 20 fl oz bottle.</p>
+        <p><strong>Sample product for website testing. </strong>Price, availability, pack details and product image must be confirmed by Your Daily Dose before live sales.</p>
+      </field>
+    </record>
+    <record id="sample_eos_lotion" model="product.template">
+      <field name="name">eos Shea Better Lotion — Strawberry Dream, 16 fl oz</field>
+      <field name="default_code">YDD-DEMO-004</field>
+      <field name="type">consu</field>
+      <field name="list_price">140</field>
+      <field name="website_sequence">25</field>
+      <field name="description_sale">Strawberry Dream body lotion from the eos Shea Better range, in a 16 fl oz bottle.</field>
+      <field name="ydd_sample_source_url">https://fcp.online/product/eos-shea-better-body-lotion-strawberry-dream-24-hour-moisture-skin-care-lightweight-non-greasy-made-with-natural-shea-vegan-16-fl-oz/</field>
+      <field name="sale_ok" eval="True"/>
+      <field name="is_published" eval="True"/>
+      <field name="ydd_sample_product" eval="True"/>
+      <field name="ydd_homepage_featured" eval="True"/>
+      <field name="purchase_ok" eval="False"/>
+      <field name="is_storable" eval="False"/>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="public_categ_ids" eval="[(6, 0, [ref('category_2')])]"/>
+      <field name="image_1920" type="base64" file="ydd_pharmacy_website/static/src/img/eos-lotion.jpg"/>
+      <field name="website_description" type="html">
+        <p>Strawberry Dream body lotion from the eos Shea Better range, in a 16 fl oz bottle.</p>
+        <p><strong>Sample product for website testing. </strong>Price, availability, pack details and product image must be confirmed by Your Daily Dose before live sales.</p>
+      </field>
+    </record>
+    <record id="sample_ogx_mist" model="product.template">
+      <field name="name">OGX ProGrowth + Peptide Serum Mist — 6.5 fl oz</field>
+      <field name="default_code">YDD-DEMO-005</field>
+      <field name="type">consu</field>
+      <field name="list_price">129</field>
+      <field name="website_sequence">30</field>
+      <field name="description_sale">Hair serum mist from the OGX ProGrowth range, supplied in a 6.5 fl oz bottle.</field>
+      <field name="ydd_sample_source_url">https://fcp.online/product/ogx-progrowth-peptide-serum-mist-6-5-fl-oz/</field>
+      <field name="sale_ok" eval="True"/>
+      <field name="is_published" eval="True"/>
+      <field name="ydd_sample_product" eval="True"/>
+      <field name="ydd_homepage_featured" eval="True"/>
+      <field name="purchase_ok" eval="False"/>
+      <field name="is_storable" eval="False"/>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="public_categ_ids" eval="[(6, 0, [ref('category_3')])]"/>
+      <field name="image_1920" type="base64" file="ydd_pharmacy_website/static/src/img/ogx-mist.jpg"/>
+      <field name="website_description" type="html">
+        <p>Hair serum mist from the OGX ProGrowth range, supplied in a 6.5 fl oz bottle.</p>
+        <p><strong>Sample product for website testing. </strong>Price, availability, pack details and product image must be confirmed by Your Daily Dose before live sales.</p>
+      </field>
+    </record>
+    <record id="sample_ogx_shampoo" model="product.template">
+      <field name="name">OGX Coconut Curls Shampoo — 13 fl oz</field>
+      <field name="default_code">YDD-DEMO-006</field>
+      <field name="type">consu</field>
+      <field name="list_price">65</field>
+      <field name="website_sequence">35</field>
+      <field name="description_sale">A 13 fl oz bottle from the OGX Quenching+ Coconut Curls shampoo range. Packaging may vary.</field>
+      <field name="ydd_sample_source_url">https://fcp.online/product/ogx-quenching-coconut-curls-shampoo-curly-hair-shampoo-with-coconut-oil-citrus-oil-honey-13-fl-oz-packaging-may-vary/</field>
+      <field name="sale_ok" eval="True"/>
+      <field name="is_published" eval="True"/>
+      <field name="ydd_sample_product" eval="True"/>
+      <field name="ydd_homepage_featured" eval="True"/>
+      <field name="purchase_ok" eval="False"/>
+      <field name="is_storable" eval="False"/>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="public_categ_ids" eval="[(6, 0, [ref('category_3')])]"/>
+      <field name="image_1920" type="base64" file="ydd_pharmacy_website/static/src/img/ogx-shampoo.jpg"/>
+      <field name="website_description" type="html">
+        <p>A 13 fl oz bottle from the OGX Quenching+ Coconut Curls shampoo range. Packaging may vary.</p>
+        <p><strong>Sample product for website testing. </strong>Price, availability, pack details and product image must be confirmed by Your Daily Dose before live sales.</p>
+      </field>
+    </record>
+    <record id="sample_olly_softgels" model="product.template">
+      <field name="name">OLLY Women’s Multivitamin Softgels — 60 Count</field>
+      <field name="default_code">YDD-DEMO-007</field>
+      <field name="type">consu</field>
+      <field name="list_price">260</field>
+      <field name="website_sequence">40</field>
+      <field name="description_sale">A 60-count pack of OLLY Ultra Strength Women’s Multivitamin Softgels with Omega-3s. Read the label and speak with a pharmacist before use.</field>
+      <field name="ydd_sample_source_url">https://fcp.online/product/olly-ultra-strength-womens-multivitamin-softgels-omega-3s-60-count/</field>
+      <field name="sale_ok" eval="True"/>
+      <field name="is_published" eval="True"/>
+      <field name="ydd_sample_product" eval="True"/>
+      <field name="ydd_homepage_featured" eval="True"/>
+      <field name="purchase_ok" eval="False"/>
+      <field name="is_storable" eval="False"/>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="public_categ_ids" eval="[(6, 0, [ref('category_4')])]"/>
+      <field name="image_1920" type="base64" file="ydd_pharmacy_website/static/src/img/olly-softgels.jpg"/>
+      <field name="website_description" type="html">
+        <p>A 60-count pack of OLLY Ultra Strength Women’s Multivitamin Softgels with Omega-3s. Read the label and speak with a pharmacist before use.</p>
+        <p><strong>Sample product for website testing. </strong>Price, availability, pack details and product image must be confirmed by Your Daily Dose before live sales.</p>
+      </field>
+    </record>
+    <record id="sample_olly_gummies" model="product.template">
+      <field name="name">OLLY Women’s 40+ Multivitamin Gummies — 90 Count</field>
+      <field name="default_code">YDD-DEMO-008</field>
+      <field name="type">consu</field>
+      <field name="list_price">245</field>
+      <field name="website_sequence">45</field>
+      <field name="description_sale">A 90-count pack of OLLY Women’s 40+ multivitamin gummies. Read the label and speak with a pharmacist before use.</field>
+      <field name="ydd_sample_source_url">https://fcp.online/product/olly-womens-40-multivitamin-gummies-90ct/</field>
+      <field name="sale_ok" eval="True"/>
+      <field name="is_published" eval="True"/>
+      <field name="ydd_sample_product" eval="True"/>
+      <field name="ydd_homepage_featured" eval="True"/>
+      <field name="purchase_ok" eval="False"/>
+      <field name="is_storable" eval="False"/>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="public_categ_ids" eval="[(6, 0, [ref('category_4')])]"/>
+      <field name="image_1920" type="base64" file="ydd_pharmacy_website/static/src/img/olly-gummies.jpg"/>
+      <field name="website_description" type="html">
+        <p>A 90-count pack of OLLY Women’s 40+ multivitamin gummies. Read the label and speak with a pharmacist before use.</p>
+        <p><strong>Sample product for website testing. </strong>Price, availability, pack details and product image must be confirmed by Your Daily Dose before live sales.</p>
+      </field>
+    </record>
+    <record id="sample_johnsons_shampoo" model="product.template">
+      <field name="name">Johnson’s Baby Shampoo — 13.6 fl oz</field>
+      <field name="default_code">YDD-DEMO-009</field>
+      <field name="type">consu</field>
+      <field name="list_price">48</field>
+      <field name="website_sequence">50</field>
+      <field name="description_sale">Johnson’s Baby Shampoo in a 13.6 fl oz bottle for a baby-care routine. Follow the directions on the product label.</field>
+      <field name="ydd_sample_source_url">https://fcp.online/product/johnsons-baby-shampoo-for-delicate-scalp-skin-13-6-fl-oz/</field>
+      <field name="sale_ok" eval="True"/>
+      <field name="is_published" eval="True"/>
+      <field name="ydd_sample_product" eval="True"/>
+      <field name="ydd_homepage_featured" eval="True"/>
+      <field name="purchase_ok" eval="False"/>
+      <field name="is_storable" eval="False"/>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="public_categ_ids" eval="[(6, 0, [ref('category_5')])]"/>
+      <field name="image_1920" type="base64" file="ydd_pharmacy_website/static/src/img/johnsons-shampoo.jpg"/>
+      <field name="website_description" type="html">
+        <p>Johnson’s Baby Shampoo in a 13.6 fl oz bottle for a baby-care routine. Follow the directions on the product label.</p>
+        <p><strong>Sample product for website testing. </strong>Price, availability, pack details and product image must be confirmed by Your Daily Dose before live sales.</p>
+      </field>
+    </record>
+    <record id="sample_venus_razor" model="product.template">
+      <field name="name">Gillette Venus Sensitive Razors — 2 Pack</field>
+      <field name="default_code">YDD-DEMO-010</field>
+      <field name="type">consu</field>
+      <field name="list_price">37.95</field>
+      <field name="website_sequence">55</field>
+      <field name="description_sale">A two-pack of Gillette Venus Sensitive razors for a personal-care routine.</field>
+      <field name="ydd_sample_source_url">https://fcp.online/product/gillette-venus-sensitive-razor-2-pack/</field>
+      <field name="sale_ok" eval="True"/>
+      <field name="is_published" eval="True"/>
+      <field name="ydd_sample_product" eval="True"/>
+      <field name="ydd_homepage_featured" eval="True"/>
+      <field name="purchase_ok" eval="False"/>
+      <field name="is_storable" eval="False"/>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="public_categ_ids" eval="[(6, 0, [ref('category_6')])]"/>
+      <field name="image_1920" type="base64" file="ydd_pharmacy_website/static/src/img/venus-razor.jpg"/>
+      <field name="website_description" type="html">
+        <p>A two-pack of Gillette Venus Sensitive razors for a personal-care routine.</p>
+        <p><strong>Sample product for website testing. </strong>Price, availability, pack details and product image must be confirmed by Your Daily Dose before live sales.</p>
+      </field>
+    </record>
+    <record id="sample_dove_spray" model="product.template">
+      <field name="name">Dove Deodorant — Pomegranate &amp; Lemon Verbena, 250 ml</field>
+      <field name="default_code">YDD-DEMO-011</field>
+      <field name="type">consu</field>
+      <field name="list_price">55</field>
+      <field name="website_sequence">60</field>
+      <field name="description_sale">Dove Advanced Care spray in the Pomegranate &amp; Lemon Verbena fragrance, supplied in a 250 ml can.</field>
+      <field name="ydd_sample_source_url">https://fcp.online/product/dove-advanced-care-pomegranate-lemon-verbena-deodorant-spray-250ml/</field>
+      <field name="sale_ok" eval="True"/>
+      <field name="is_published" eval="True"/>
+      <field name="ydd_sample_product" eval="True"/>
+      <field name="ydd_homepage_featured" eval="True"/>
+      <field name="purchase_ok" eval="False"/>
+      <field name="is_storable" eval="False"/>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="public_categ_ids" eval="[(6, 0, [ref('category_6')])]"/>
+      <field name="image_1920" type="base64" file="ydd_pharmacy_website/static/src/img/dove-spray.jpg"/>
+      <field name="website_description" type="html">
+        <p>Dove Advanced Care spray in the Pomegranate &amp; Lemon Verbena fragrance, supplied in a 250 ml can.</p>
+        <p><strong>Sample product for website testing. </strong>Price, availability, pack details and product image must be confirmed by Your Daily Dose before live sales.</p>
+      </field>
+    </record>
+    <record id="sample_burts_lip" model="product.template">
+      <field name="name">Burt’s Bees Tinted Lip Balm — 3 Pack</field>
+      <field name="default_code">YDD-DEMO-012</field>
+      <field name="type">consu</field>
+      <field name="list_price">145</field>
+      <field name="website_sequence">65</field>
+      <field name="description_sale">A value pack containing three 0.15 oz tubes of Burt’s Bees tinted lip balm.</field>
+      <field name="ydd_sample_source_url">https://fcp.online/product/burts-bees-tinted-lip-balm-value-pack-0-15-oz-3-tubes/</field>
+      <field name="sale_ok" eval="True"/>
+      <field name="is_published" eval="True"/>
+      <field name="ydd_sample_product" eval="True"/>
+      <field name="ydd_homepage_featured" eval="True"/>
+      <field name="purchase_ok" eval="False"/>
+      <field name="is_storable" eval="False"/>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="public_categ_ids" eval="[(6, 0, [ref('category_6')])]"/>
+      <field name="image_1920" type="base64" file="ydd_pharmacy_website/static/src/img/burts-lip.jpg"/>
+      <field name="website_description" type="html">
+        <p>A value pack containing three 0.15 oz tubes of Burt’s Bees tinted lip balm.</p>
+        <p><strong>Sample product for website testing. </strong>Price, availability, pack details and product image must be confirmed by Your Daily Dose before live sales.</p>
+      </field>
+    </record>
+  </data>
+</odoo>

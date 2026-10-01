@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+  <template id="ydd_footer" name="Your Daily Dose footer">
+    <div class="ydd-content ydd-footer">
+      <div class="wrap footer-main">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="/ydd_pharmacy_website/static/src/img/ydd-logo.jpeg" width="1024" height="1024" alt="Your Daily Dose Pharmacy" class="img-fluid"/>
+          </div>
+          <p>A little care can make a big difference.<br/>Your wellbeing is at the heart of it.</p>
+        </div>
+        <div>
+          <h2>Explore</h2>
+          <a href="/">Home</a>
+          <a href="/shop">Shop all products</a><a href="/pharmacy-services">Our services</a>
+          <a href="/wellness">Wellness</a>
+        <a href="/my/orders">My orders</a></div>
+        <div>
+          <h2>Get to know us</h2>
+          <a href="/about-us">About Us</a>
+          <a href="/visit-us">Visit &amp; contact</a>
+          <a href="/pharmacy-services#questions">Common questions</a>
+        </div>
+        <div class="footer-note ydd-footer-contact">
+          <h2>Get in touch</h2><p t-if="website.ydd_address" t-field="website.ydd_address"/><a t-if="website.ydd_phone" t-att-href="'tel:' + website.ydd_phone"><span t-field="website.ydd_phone"/></a><a t-if="website.ydd_email" t-att-href="'mailto:' + website.ydd_email"><span t-field="website.ydd_email"/></a><a t-if="website._ydd_maps_url()" t-att-href="website._ydd_maps_url()" target="_blank" rel="noopener">Get directions →</a><div class="ydd-social-links"><a href="https://www.facebook.com/yddpharmacy/" target="_blank" rel="noopener" aria-label="Your Daily Dose Pharmacy on Facebook"><i class="fa fa-facebook" aria-hidden="true"/></a><a href="https://www.instagram.com/yourdailydosepharmacy/" target="_blank" rel="noopener" aria-label="Your Daily Dose Pharmacy on Instagram"><i class="fa fa-instagram" aria-hidden="true"/></a><a t-if="website._ydd_whatsapp_url()" t-att-href="website._ydd_whatsapp_url()" target="_blank" rel="noopener" aria-label="Chat with Your Daily Dose Pharmacy on WhatsApp"><i class="fa fa-whatsapp" aria-hidden="true"/></a></div></div>
+      </div>
+      <div class="wrap footer-bottom">
+        <span>© 2026 Your Daily Dose Pharmacy.</span>
+        <span>Website by <a href="https://spxcorp.net" target="_blank" rel="noopener">Spxcorp Limited</a></span>
+      </div>
+    </div>
+  </template>
+  <template id="layout_brand" inherit_id="website.layout" priority="99" name="Your Daily Dose branding around native Odoo layout">
+    <xpath expr="//div[@id='wrapwrap']" position="attributes">
+      <attribute name="t-attf-class" add="#{'ydd-site' if website.ydd_brand_enabled else ''}" separator=" "/>
+    </xpath>
+    <xpath expr="//footer[@id='bottom']" position="inside">
+      <t t-if="website.ydd_brand_enabled and not no_footer" t-call="ydd_pharmacy_website.ydd_footer"/>
+    </xpath>
+    <xpath expr="//div[@id='wrapwrap']/main" position="before">
+      <div t-if="website.ydd_brand_enabled and website.ydd_catalogue_notice" class="ydd-catalogue-notice" role="note">Sample catalogue — products and prices are for website testing.</div>
+    </xpath>
+  <xpath expr="//header/*[1]" position="before"><t t-call="ydd_pharmacy_website.ydd_announcement"/></xpath></template>
+<template id="ydd_phone_link" name="Your Daily Dose company phone">
+    <a t-if="website.ydd_phone" t-att-href="'tel:' + website.ydd_phone" class="ydd-phone-link">
+      <i class="fa fa-phone" aria-hidden="true"/><span class="o_force_ltr" t-field="website.ydd_phone"/>
+    </a>
+    <a t-else="" href="/visit-us" class="ydd-phone-link">Visit &amp; contact</a>
+  </template>
+  <template id="ydd_announcement" name="Your Daily Dose announcement strip">
+    <div t-if="website.ydd_brand_enabled" class="ydd-topbar">
+      <div class="ydd-topbar-inner">
+        <span>Your community pharmacy <strong>— One dose of care at a time.</strong></span>
+        <div class="ydd-topbar-contact"><span t-if="website.ydd_opening_hours" t-field="website.ydd_opening_hours"/><t t-call="ydd_pharmacy_website.ydd_phone_link"/><a t-if="website._ydd_whatsapp_url()" t-att-href="website._ydd_whatsapp_url()" target="_blank" rel="noopener" class="ydd-phone-link" aria-label="WhatsApp Your Daily Dose Pharmacy"><i class="fa fa-whatsapp" aria-hidden="true"/><span>WhatsApp</span></a></div>
+      </div>
+    </div>
+  </template>
+  <template id="ydd_header_order" inherit_id="website_sale.template_header_default" priority="60" name="Your Daily Dose native header order">
+    <xpath expr="//t[@t-call='website.placeholder_header_text_element']" position="attributes"><attribute name="t-if">not website.ydd_brand_enabled</attribute></xpath>
+    <xpath expr="//t[@t-call='website.placeholder_header_call_to_action']" position="attributes"><attribute name="t-if">not website.ydd_brand_enabled</attribute></xpath>
+    <xpath expr="//t[@t-call='portal.user_dropdown']" position="attributes">
+      <attribute name="_user_name">not website.ydd_brand_enabled</attribute>
+      <attribute name="_icon">website.ydd_brand_enabled</attribute>
+      <attribute name="_link_class.f"/>
+      <attribute name="_link_class">'o_navlink_background btn rounded-circle position-relative text-reset' if website.ydd_brand_enabled else ((_additional_btn_color or 'nav-link') + ' border-0')</attribute>
+    </xpath>
+    <xpath expr="//t[@t-call='website_sale.header_cart_link']" position="attributes"><attribute name="t-if">not website.ydd_brand_enabled</attribute></xpath>
+    <xpath expr="//t[@t-call='portal.user_dropdown']" position="after">
+      <t t-if="website.ydd_brand_enabled" t-call="website_sale.header_cart_link" _icon="True" _text="False" _item_class.f="o_no_autohide_item" _link_class.f="o_navlink_background btn rounded-circle position-relative text-reset" _badge_class.f="position-absolute top-0 end-0"/>
+    </xpath>
+  </template>
+  <template id="ydd_account_label" inherit_id="portal.user_dropdown" name="Account button accessibility">
+    <xpath expr="//a[@data-bs-toggle='dropdown']" position="attributes"><attribute name="aria-label">My account</attribute></xpath>
+  </template>
+<template id="ydd_native_phone" inherit_id="website.header_text_element" priority="60" name="Your Daily Dose native phone element"><xpath expr="(//a[starts-with(@href, 'tel:')])[3]" position="replace"><t t-if="website.ydd_brand_enabled" t-call="ydd_pharmacy_website.ydd_phone_link"/><a href="tel:+1 555-555-5556" class="nav-link o_nav-link_secondary p-2" t-else="">
+                        <i class="fa fa-1x fa-fw fa-phone me-1"/>
+                        <span class="o_force_ltr"><small>+1 555-555-5556</small></span>
+                    </a>
+                </xpath><xpath expr="(//a[starts-with(@href, 'tel:')])[2]" position="replace"><t t-if="website.ydd_brand_enabled" t-call="ydd_pharmacy_website.ydd_phone_link"/><a href="tel:+1 555-555-5556" class="nav-link o_nav-link_secondary p-2 o_navlink_background_hover d-flex align-items-center h-100 text-reset" t-else="">
+                        <i class="fa fa-1x fa-fw fa-phone me-1"/>
+                        <span class="o_force_ltr"><small>+1 555-555-5556</small></span>
+                    </a>
+                </xpath><xpath expr="(//a[starts-with(@href, 'tel:')])[1]" position="replace"><t t-if="website.ydd_brand_enabled" t-call="ydd_pharmacy_website.ydd_phone_link"/><a href="tel:+1 555-555-5556" class="nav-link o_nav-link_secondary" t-else="">
+                        <small>
+                            <i class="fa fa-1x fa-fw fa-phone me-1"/>͏ <!-- Empty character needed to be able to delete the icon. -->
+                            <span class="o_force_ltr">+1 555-555-5556</span>
+                        </small>
+                    </a>
+                    </xpath></template></odoo>
