@@ -20,7 +20,7 @@
             <div class="section-heading"><div><span class="eyebrow">DISCOVER SOMETHING FOR YOU</span><h2>Everyday favourites</h2></div><a href="/shop" class="quiet-link">Shop all products <span aria-hidden="true">→</span></a></div>
             <div class="ydd-product-grid">
                 <article t-foreach="ydd_products" t-as="product" class="ydd-product-card">
-                    <a t-att-href="product.website_url" class="ydd-product-photo"><img t-att-src="'/web/image/product.template/%s/image_1024' % product.id" t-att-alt="product.name" width="512" height="512" loading="lazy"/><span t-if="product.ydd_sample_product and website.ydd_catalogue_notice" class="ydd-sample-badge">Sample</span></a>
+                    <a t-att-href="product.website_url" class="ydd-product-photo"><img t-att-src="'/web/image/product.template/%s/image_1024' % product.id" t-att-alt="product.name" width="512" height="512" loading="lazy"/></a>
                     <div class="ydd-product-copy"><h3><a t-att-href="product.website_url" t-field="product.name"/></h3>
                         <t t-set="price" t-value="ydd_prices[product.id]"/>
                         <div class="ydd-product-price" t-if="not website.prevent_zero_price_sale or price['price_reduce']">

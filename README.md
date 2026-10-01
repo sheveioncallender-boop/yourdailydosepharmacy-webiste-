@@ -60,7 +60,7 @@ The same 12 photographed sample products and six ecommerce categories used in No
 - Use **Unpublish sample products** in Website settings when replacing the examples. Existing orders and product records are retained.
 - Product and page seeds are `noupdate=1`: upgrades preserve prices, publication choices, content edits and contact settings.
 
-The sample notice starts enabled. Confirm real catalogue images, prices, stock, TTD pricelist/company currency, applicable taxes, delivery methods and payment provider settings before taking live orders. This addon does not install a payment gateway, automatically enable insurance processing, or implement prescription uploads. Prescription enquiries are directed to the pharmacy.
+No sample notices or badges are displayed to visitors. Confirm real catalogue images, prices, stock, TTD pricelist/company currency, applicable taxes, delivery methods and payment provider settings before taking live orders. This addon does not install a payment gateway, automatically enable insurance processing, or implement prescription uploads. Prescription enquiries are directed to the pharmacy.
 
 ## Validation
 
@@ -75,4 +75,8 @@ Check the repository’s Actions results for runtime status. No customer Cloudpe
 
 ## Assets
 
-The supplied logo is preserved exactly; CSS frames its whitespace in the header/footer. Three real stock photographs, local fonts and the sample product photographs are bundled, so the website does not depend on image hotlinks. Pictured people are not represented as pharmacy employees. Credits and source URLs are in `ASSET_CREDITS.json`; font licences are bundled. Code is LGPL-3.0-or-later.
+The supplied logo is preserved exactly; CSS frames its whitespace in the header/footer. Three distinct real stock photographs (different from Noel’s), local fonts and the sample product photographs are bundled, so the website does not depend on image hotlinks. Pictured people are not represented as pharmacy employees. Credits and source URLs are in `ASSET_CREDITS.json`; font licences are bundled. Code is LGPL-3.0-or-later.
+
+### Updating an existing installation to 19.0.1.1.0
+
+Pull/rebuild the latest commit in Cloudpepper, then upgrade **Your Daily Dose Pharmacy — Website & Shop** in Apps. The versioned migration replaces the old bundled photos and removes the seeded sample paragraphs from existing pages/products while keeping merchant edits, prices, publication and contact settings. The homepage remains `/ydd-home`, served through the native website root `/`. Phone banners use a visible photo above the content; tablet and desktop layouts retain the split banner. Refresh the browser after the upgrade to load the new asset bundle.

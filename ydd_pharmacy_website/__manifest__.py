@@ -1,6 +1,6 @@
 {
     'name': "Your Daily Dose Pharmacy — Website & Shop",
-    'version': '19.0.1.0.0',
+    'version': '19.0.1.1.0',
     'summary': 'Your Daily Dose design, native Odoo eCommerce, category cards and a sample catalogue',
     'category': 'Website/eCommerce',
     'author': 'Spxcorp Limited',

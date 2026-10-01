@@ -287,3 +287,34 @@
 @media(max-width:600px) { .ydd-content .footer-main { grid-template-columns: 1fr 1fr; gap: 26px; } .ydd-content .footer-brand, .ydd-content .ydd-footer-contact { grid-column: 1 / -1; } }
 
 .ydd-site > header .navbar-brand.logo > span { display: block; flex-shrink: 0; line-height: 0; }
+
+// Keep the people in view with the new landscape photography.
+.ydd-content .banner-slide:first-child > img { object-position: center 78%; }
+.ydd-content .pharmacy-slide > img { object-position: 35% center; }
+.ydd-content .rounded-photo img { object-position: 35% center; }
+
+// On phones the image occupies its own row. All slides contribute their height,
+// so the banner cannot collapse or cover the photograph with a text gradient.
+@media (max-width: 767.98px) {
+    .ydd-content {
+        .banner-slider { display: grid; height: auto; min-height: 0; }
+        .banner-slide {
+            position: relative; inset: auto; grid-area: 1 / 1;
+            display: flex; flex-direction: column; padding-bottom: 76px; min-width: 0;
+            background: white;
+        }
+        .banner-slide > img, .banner-slide:not(.pharmacy-slide) > img {
+            position: relative; inset: auto; display: block; width: 100%;
+            height: clamp(235px, 66vw, 350px); flex-shrink: 0; object-fit: cover;
+        }
+        .banner-slide:first-child > img { object-position: center 78%; }
+        .pharmacy-slide > img { object-position: 35% 40%; }
+        .wellness-slide > img { object-position: center 65% !important; }
+        .banner-slide .banner-shade { display: none; }
+        .banner-content { height: auto; padding-top: 25px; padding-bottom: 0; }
+        .banner-content h1, .banner-content h2 { max-width: 100%; font-size: clamp(34px, 8vw, 44px); }
+        .banner-content p { max-width: 100%; margin: 18px 0; }
+        .hero-buttons { max-width: 100%; }
+        .banner-controls { bottom: 16px; }
+    }
+}

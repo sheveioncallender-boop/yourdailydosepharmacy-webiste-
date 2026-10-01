@@ -24,7 +24,7 @@ def post_init_hook(env):
     website.write({
         'name': BRAND_NAME, 'logo': logo,
         'homepage_url': '/ydd-home', 'ydd_brand_enabled': True,
-        'ydd_catalogue_notice': True,
+        'ydd_catalogue_notice': False,
     })
     menu_specs = [
         ('shop', 'Shop', '/shop', False, 15, ['/shop']),

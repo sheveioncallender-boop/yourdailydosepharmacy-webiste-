@@ -13,7 +13,6 @@
                     <setting string="WhatsApp" help="International digits only, for example 18683163281. Clear to hide WhatsApp links."><field name="ydd_whatsapp"/></setting>
                     <setting string="Pharmacy address" help="Used on the contact page and map directions."><field name="ydd_address"/></setting>
                     <setting string="Pharmacy email"><field name="ydd_email"/></setting>
-                    <setting string="Sample catalogue notice" help="Keep this enabled while reviewing sample products and prices."><field name="ydd_catalogue_notice"/></setting>
                     <setting string="Sample products" help="Unpublish all Your Daily Dose sample products for the selected website before launch. This does not delete products or orders.">
                         <button name="action_ydd_unpublish_samples" type="object" string="Unpublish sample products" class="btn btn-secondary" confirm="Unpublish the Your Daily Dose sample products on this website?"/>
                     </setting>

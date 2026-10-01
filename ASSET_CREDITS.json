@@ -2,19 +2,19 @@
   "approved_design": {
     "photography": [
       {
-        "file": "ydd_pharmacy_website/static/src/img/pharmacist.jpg",
-        "photographer": "BYB BYB",
-        "source": "https://www.pexels.com/photo/young-pharmacist-in-drugstore-19471013/"
+        "file": "ydd_pharmacy_website/static/src/img/family-outdoors.jpg",
+        "photographer": "Agung Pandit Wiguna",
+        "source": "https://www.pexels.com/photo/family-sitting-on-grass-near-building-1128316/"
       },
       {
-        "file": "ydd_pharmacy_website/static/src/img/wellness.jpg",
-        "photographer": "Polina Tankilevitch",
-        "source": "https://www.pexels.com/photo/a-woman-doing-yoga-at-the-park-8538961/"
+        "file": "ydd_pharmacy_website/static/src/img/pharmacy-care.jpg",
+        "photographer": "World Sikh Organization of Canada",
+        "source": "https://www.pexels.com/photo/smiling-pharmacist-with-beard-14797857/"
       },
       {
-        "file": "ydd_pharmacy_website/static/src/img/family.jpg",
-        "photographer": "I E Mike",
-        "source": "https://www.pexels.com/photo/7800414/"
+        "file": "ydd_pharmacy_website/static/src/img/active-living.jpg",
+        "photographer": "Antoni Shkraba",
+        "source": "https://www.pexels.com/photo/a-woman-exercising-on-the-park-playground-5149159/"
       }
     ],
     "photo_license": "https://www.pexels.com/license/",
@@ -154,5 +154,23 @@
     "repository": "https://github.com/sheveioncallender-boop/noels-pharmacy-website-19",
     "commit": "1dd1527d68db58ad0d1cb3e9eb25beb8201ad7d2",
     "structure": "Latest five-page Noel’s storefront, using the Value Seekers native-header approach."
-  }
+  },
+  "legacy_photography": [
+    {
+      "file": "ydd_pharmacy_website/static/src/img/pharmacist.jpg",
+      "photographer": "BYB BYB",
+      "source": "https://www.pexels.com/photo/young-pharmacist-in-drugstore-19471013/"
+    },
+    {
+      "file": "ydd_pharmacy_website/static/src/img/wellness.jpg",
+      "photographer": "Polina Tankilevitch",
+      "source": "https://www.pexels.com/photo/a-woman-doing-yoga-at-the-park-8538961/"
+    },
+    {
+      "file": "ydd_pharmacy_website/static/src/img/family.jpg",
+      "photographer": "I E Mike",
+      "source": "https://www.pexels.com/photo/7800414/"
+    }
+  ],
+  "legacy_photography_note": "Retained unused files for compatibility with separately edited pages; the delivered pages use the new photography above."
 }

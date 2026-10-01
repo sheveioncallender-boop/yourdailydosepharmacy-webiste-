@@ -80,7 +80,6 @@
       <field name="image_1920" type="base64" file="ydd_pharmacy_website/static/src/img/vanicream-daily.jpg"/>
       <field name="website_description" type="html">
         <p>A 3 fl oz facial moisturiser for your daily skin-care routine. Check the product label for ingredients and directions.</p>
-        <p><strong>Sample product for website testing. </strong>Price, availability, pack details and product image must be confirmed by Your Daily Dose before live sales.</p>
       </field>
     </record>
     <record id="sample_vanicream_cream" model="product.template">
@@ -102,7 +101,6 @@
       <field name="image_1920" type="base64" file="ydd_pharmacy_website/static/src/img/vanicream-cream.jpg"/>
       <field name="website_description" type="html">
         <p>Face and body moisturising cream in a 16 oz pump dispenser.</p>
-        <p><strong>Sample product for website testing. </strong>Price, availability, pack details and product image must be confirmed by Your Daily Dose before live sales.</p>
       </field>
     </record>
     <record id="sample_olay_body" model="product.template">
@@ -124,7 +122,6 @@
       <field name="image_1920" type="base64" file="ydd_pharmacy_website/static/src/img/olay-body.jpg"/>
       <field name="website_description" type="html">
         <p>Body wash in the Normal Skin variant, supplied in a 20 fl oz bottle.</p>
-        <p><strong>Sample product for website testing. </strong>Price, availability, pack details and product image must be confirmed by Your Daily Dose before live sales.</p>
       </field>
     </record>
     <record id="sample_eos_lotion" model="product.template">
@@ -146,7 +143,6 @@
       <field name="image_1920" type="base64" file="ydd_pharmacy_website/static/src/img/eos-lotion.jpg"/>
       <field name="website_description" type="html">
         <p>Strawberry Dream body lotion from the eos Shea Better range, in a 16 fl oz bottle.</p>
-        <p><strong>Sample product for website testing. </strong>Price, availability, pack details and product image must be confirmed by Your Daily Dose before live sales.</p>
       </field>
     </record>
     <record id="sample_ogx_mist" model="product.template">
@@ -168,7 +164,6 @@
       <field name="image_1920" type="base64" file="ydd_pharmacy_website/static/src/img/ogx-mist.jpg"/>
       <field name="website_description" type="html">
         <p>Hair serum mist from the OGX ProGrowth range, supplied in a 6.5 fl oz bottle.</p>
-        <p><strong>Sample product for website testing. </strong>Price, availability, pack details and product image must be confirmed by Your Daily Dose before live sales.</p>
       </field>
     </record>
     <record id="sample_ogx_shampoo" model="product.template">
@@ -190,7 +185,6 @@
       <field name="image_1920" type="base64" file="ydd_pharmacy_website/static/src/img/ogx-shampoo.jpg"/>
       <field name="website_description" type="html">
         <p>A 13 fl oz bottle from the OGX Quenching+ Coconut Curls shampoo range. Packaging may vary.</p>
-        <p><strong>Sample product for website testing. </strong>Price, availability, pack details and product image must be confirmed by Your Daily Dose before live sales.</p>
       </field>
     </record>
     <record id="sample_olly_softgels" model="product.template">
@@ -212,7 +206,6 @@
       <field name="image_1920" type="base64" file="ydd_pharmacy_website/static/src/img/olly-softgels.jpg"/>
       <field name="website_description" type="html">
         <p>A 60-count pack of OLLY Ultra Strength Women’s Multivitamin Softgels with Omega-3s. Read the label and speak with a pharmacist before use.</p>
-        <p><strong>Sample product for website testing. </strong>Price, availability, pack details and product image must be confirmed by Your Daily Dose before live sales.</p>
       </field>
     </record>
     <record id="sample_olly_gummies" model="product.template">
@@ -234,7 +227,6 @@
       <field name="image_1920" type="base64" file="ydd_pharmacy_website/static/src/img/olly-gummies.jpg"/>
       <field name="website_description" type="html">
         <p>A 90-count pack of OLLY Women’s 40+ multivitamin gummies. Read the label and speak with a pharmacist before use.</p>
-        <p><strong>Sample product for website testing. </strong>Price, availability, pack details and product image must be confirmed by Your Daily Dose before live sales.</p>
       </field>
     </record>
     <record id="sample_johnsons_shampoo" model="product.template">
@@ -256,7 +248,6 @@
       <field name="image_1920" type="base64" file="ydd_pharmacy_website/static/src/img/johnsons-shampoo.jpg"/>
       <field name="website_description" type="html">
         <p>Johnson’s Baby Shampoo in a 13.6 fl oz bottle for a baby-care routine. Follow the directions on the product label.</p>
-        <p><strong>Sample product for website testing. </strong>Price, availability, pack details and product image must be confirmed by Your Daily Dose before live sales.</p>
       </field>
     </record>
     <record id="sample_venus_razor" model="product.template">
@@ -278,7 +269,6 @@
       <field name="image_1920" type="base64" file="ydd_pharmacy_website/static/src/img/venus-razor.jpg"/>
       <field name="website_description" type="html">
         <p>A two-pack of Gillette Venus Sensitive razors for a personal-care routine.</p>
-        <p><strong>Sample product for website testing. </strong>Price, availability, pack details and product image must be confirmed by Your Daily Dose before live sales.</p>
       </field>
     </record>
     <record id="sample_dove_spray" model="product.template">
@@ -300,7 +290,6 @@
       <field name="image_1920" type="base64" file="ydd_pharmacy_website/static/src/img/dove-spray.jpg"/>
       <field name="website_description" type="html">
         <p>Dove Advanced Care spray in the Pomegranate &amp; Lemon Verbena fragrance, supplied in a 250 ml can.</p>
-        <p><strong>Sample product for website testing. </strong>Price, availability, pack details and product image must be confirmed by Your Daily Dose before live sales.</p>
       </field>
     </record>
     <record id="sample_burts_lip" model="product.template">
@@ -322,7 +311,6 @@
       <field name="image_1920" type="base64" file="ydd_pharmacy_website/static/src/img/burts-lip.jpg"/>
       <field name="website_description" type="html">
         <p>A value pack containing three 0.15 oz tubes of Burt’s Bees tinted lip balm.</p>
-        <p><strong>Sample product for website testing. </strong>Price, availability, pack details and product image must be confirmed by Your Daily Dose before live sales.</p>
       </field>
     </record>
   </data>

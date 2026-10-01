@@ -37,9 +37,6 @@
     <xpath expr="//footer[@id='bottom']" position="inside">
       <t t-if="website.ydd_brand_enabled and not no_footer" t-call="ydd_pharmacy_website.ydd_footer"/>
     </xpath>
-    <xpath expr="//div[@id='wrapwrap']/main" position="before">
-      <div t-if="website.ydd_brand_enabled and website.ydd_catalogue_notice" class="ydd-catalogue-notice" role="note">Sample catalogue — products and prices are for website testing.</div>
-    </xpath>
   <xpath expr="//header/*[1]" position="before"><t t-call="ydd_pharmacy_website.ydd_announcement"/></xpath></template>
 <template id="ydd_phone_link" name="Your Daily Dose company phone">
     <a t-if="website.ydd_phone" t-att-href="'tel:' + website.ydd_phone" class="ydd-phone-link">

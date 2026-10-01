@@ -65,6 +65,32 @@ class TestYddWebsite(HttpCase):
         home = html.fromstring(self.url_open('/').content)
         self.assertEqual(len(home.xpath('//a[contains(@class,"ydd-category")]')), 6)
         self.assertEqual(len(home.xpath('//div[contains(concat(" ",@class," ")," banner-slide ")]')), 3)
+        self.assertNotIn('Sample catalogue', home.text_content())
+        product = html.fromstring(self.url_open(self.sample.website_url).content)
+        self.assertNotIn('Sample product for website testing', product.text_content())
+
+    def test_mobile_home_banner(self):
+        self.browser_size = '390x844'
+        self.browser_js('/', """
+            (async () => {
+                const assert = (condition, message) => { if (!condition) throw new Error(message); };
+                const banner = document.querySelector('.ydd-home .banner-slider');
+                assert(banner, 'Root URL must render the branded homepage');
+                const photo = banner.querySelector('.banner-slide.active > img');
+                await photo.decode();
+                const box = photo.getBoundingClientRect();
+                assert(box.height >= 230 && box.width >= 380, 'Mobile hero photo must have visible dimensions');
+                assert(box.top >= 0 && box.top < innerHeight - 150, 'Photo must appear on the first screen');
+                const topElement = document.elementFromPoint(box.x + box.width / 2, box.y + 60);
+                assert(topElement === photo, 'Mobile photo must not be covered by a shade or text');
+                assert(document.documentElement.scrollWidth <= innerWidth + 1, 'No horizontal mobile overflow');
+                const firstSlide = banner.querySelector('.banner-slide.active');
+                banner.querySelector('.slide-next').click();
+                await new Promise(resolve => setTimeout(resolve, 1100));
+                assert(!firstSlide.classList.contains('active'), 'Mobile next button must change slides');
+                console.log('test successful');
+            })().catch(error => console.error(error));
+        """, ready="document.querySelector('.ydd-home .banner-slider')", timeout=90)
 
     def test_native_cart_and_checkout(self):
         self.url_open('/')  # Establish the standard Odoo visitor/session.
